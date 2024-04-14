@@ -32,15 +32,15 @@ const Register = () => {
     register(email,password)
     .then( () => {
       // update user profile 
-      // updateProfile( auth.currentUser, {
-      //   displayName: `${name}`,
-      //   photoURL: `${photo}`
-      // })
-      // .then( () => {
-      //   toast.success("Congratulations! You've successfully registered.")
+      updateProfile( auth.currentUser, {
+        displayName: `${name}`,
+        photoURL: `${photo}`
+      })
+      .then( () => {
+        toast.success("Congratulations! You've successfully registered.")
         
-      // })
-      // .catch()
+      })
+      .catch()
     })
     .catch( () => {
 
