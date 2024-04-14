@@ -1,0 +1,237 @@
+[
+    {
+        "id": "1",
+        "estate_title": "Cozy Cottage",
+        "segment_name": "Single-family Home",
+        "description": "A charming cottage perfect for small families or couples. It features a spacious living room, two cozy bedrooms, and a modern kitchen.",
+        "price": 200000,
+        "status": "sale",
+        "area": "2000 sq ft",
+        "location": "Suburbs",
+        "image": "cozy_cottage.jpg",
+        "facilities": [
+            "Garden",
+            "Fireplace",
+            "Wooden Floors"
+        ],
+        "property_details": {
+            "bedrooms": 2,
+            "bathrooms": 1,
+            "kitchen": 1,
+            "parking": "Driveway"
+        },
+        "rating": 4.5
+    },
+    {
+        "id": "2",
+        "estate_title": "Modern Apartment",
+        "segment_name": "Apartment",
+        "description": "A sleek and stylish apartment with contemporary design. It boasts three bedrooms, two bathrooms, and a spacious balcony with city views.",
+        "price": 1500,
+        "status": "rent",
+        "area": "1200 sq ft",
+        "location": "Urban",
+        "image": "modern_apartment.jpg",
+        "facilities": [
+            "Balcony",
+            "Parking",
+            "Security System"
+        ],
+        "property_details": {
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "kitchen": 1,
+            "parking": "Underground"
+        },
+        "price_per_day": 100,
+        "rating": 4.2
+    },
+    {
+        "id": "3",
+        "estate_title": "Spacious Townhouse",
+        "segment_name": "Townhouse",
+        "description": "A spacious townhouse with modern amenities and a private backyard. Ideal for families seeking comfort and convenience.",
+        "price": 350000,
+        "status": "sale",
+        "area": "2500 sq ft",
+        "location": "Suburbs",
+        "image": "spacious_townhouse.jpg",
+        "facilities": [
+            "Backyard",
+            "Garage",
+            "Community Pool"
+        ],
+        "property_details": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "kitchen": 1,
+            "parking": "Garage"
+        },
+        "rating": 4.3
+    },
+    {
+        "id": "4",
+        "estate_title": "Luxury Condo",
+        "segment_name": "Condominium",
+        "description": "A luxurious condo with stunning views and top-notch amenities. It features spacious living areas, multiple bedrooms, and high-end finishes.",
+        "price": 750000,
+        "status": "sale",
+        "area": "1800 sq ft",
+        "location": "City Center",
+        "image": "luxury_condo.jpg",
+        "facilities": [
+            "Swimming Pool",
+            "Fitness Center",
+            "Concierge Service"
+        ],
+        "property_details": {
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "kitchen": 1,
+            "parking": "Underground"
+        },
+        "rating": 4.8
+    },
+    {
+        "id": "5",
+        "estate_title": "Student Housing Complex",
+        "segment_name": "Student Housing",
+        "description": "A purpose-built student housing complex offering modern amenities and a vibrant community atmosphere. Close to universities and public transportation.",
+        "price": 900,
+        "status": "rent",
+        "area": "400 sq ft (per room)",
+        "location": "Near University",
+        "image": "student_housing.jpg",
+        "facilities": [
+            "Furnished Rooms",
+            "Study Areas",
+            "Fitness Center"
+        ],
+        "property_details": {
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "kitchen": 1,
+            "parking": "On-site"
+        },
+        "price_per_day": 30,
+        "rating": 4.0
+    },
+    {
+        "id": "6",
+        "estate_title": "Senior Living Community",
+        "segment_name": "Senior Living",
+        "description": "A senior living community offering independent living, assisted living, and memory care services. Featuring spacious apartments, gourmet dining, and engaging activities.",
+        "price": 4000,
+        "status": "rent",
+        "area": "1000 sq ft",
+        "location": "Retirement Village",
+        "image": "senior_living.jpg",
+        "facilities": [
+            "Restaurant",
+            "Library",
+            "Fitness Center"
+        ],
+        "property_details": {
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "kitchen": 1,
+            "parking": "Covered"
+        },
+        "price_per_day": 150,
+        "rating": 4.5
+    },
+    {
+        "id": "7",
+        "estate_title": "Vacation Rental Villa",
+        "segment_name": "Vacation Rental",
+        "description": "A luxurious vacation rental villa with private pool and stunning ocean views. Ideal for families or groups seeking a relaxing getaway.",
+        "price": 3000,
+        "status": "rent",
+        "area": "3000 sq ft",
+        "location": "Beachfront",
+        "image": "vacation_villa.jpg",
+        "facilities": [
+            "Private Pool",
+            "Oceanfront Terrace",
+            "BBQ Area"
+        ],
+        "property_details": {
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "kitchen": 1,
+            "parking": "Private"
+        },
+        "price_per_day": 250,
+        "rating": 4.9
+    },
+    {
+        "id": "8",
+        "estate_title": "Rural Farmhouse",
+        "segment_name": "Rural Property",
+        "description": "A traditional farmhouse nestled in the countryside, offering tranquility and natural beauty. Ideal for those seeking a peaceful rural retreat.",
+        "price": 500000,
+        "status": "sale",
+        "area": "5 acres",
+        "location": "Rural",
+        "image": "rural_farmhouse.jpg",
+        "facilities": [
+            "Barn",
+            "Pond",
+            "Garden"
+        ],
+        "property_details": {
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "kitchen": 1,
+            "parking": "Open"
+        },
+        "rating": 4.6
+    },
+    {
+        "id": "9",
+        "estate_title": "Downtown Loft",
+        "segment_name": "Loft",
+        "description": "A trendy loft apartment in the heart of the city, featuring industrial-chic design and urban views. Perfect for young professionals or artists.",
+        "price": 700000,
+        "status": "sale",
+        "area": "1500 sq ft",
+        "location": "Downtown",
+        "image": "downtown_loft.jpg",
+        "facilities": [
+            "Exposed Brick Walls",
+            "High Ceilings",
+            "Roof Deck"
+        ],
+        "property_details": {
+            "bedrooms": 2,
+            "bathrooms": 1,
+            "kitchen": 1,
+            "parking": "Street Parking"
+        },
+        "rating": 4.7
+    },
+    {
+        "id": "10",
+        "estate_title": "Lakefront Cabin",
+        "segment_name": "Vacation Rental",
+        "description": "A cozy lakefront cabin nestled in the woods, offering stunning views and a peaceful atmosphere. Perfect for a romantic getaway or outdoor adventure.",
+        "price": 2500,
+        "status": "rent",
+        "area": "1000 sq ft",
+        "location": "Lakefront",
+        "image": "lakefront_cabin.jpg",
+        "facilities": [
+            "Private Dock",
+            "Fire Pit",
+            "Canoe"
+        ],
+        "property_details": {
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "kitchen": 1,
+            "parking": "On-site"
+        },
+        "price_per_day": 200,
+        "rating": 4.8
+    }
+]
