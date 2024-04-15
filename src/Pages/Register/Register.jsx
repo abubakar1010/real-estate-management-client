@@ -4,19 +4,28 @@ import {
     Checkbox,
     Typography,
   } from "@material-tailwind/react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { updateProfile } from "firebase/auth";
 import auth from "../../firebase/firebase.init";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
 
-  const {register, setLoading} = useContext(AuthContext)
+  const {register} = useContext(AuthContext)
 
-  console.log(register);
+  const [isShowPassword, setIsShowPassword] = useState(false)
+
+  // console.log(register);
+
+  const handleShowPassword = () => {
+
+    setIsShowPassword(!isShowPassword)
+  }
   
   const handleSubmit = (e) => {
 
@@ -26,6 +35,23 @@ const Register = () => {
     const photo = e.target.photo.value
     const email = e.target.email.value
     const password = e.target.password.value
+    const accepted = e.target.terms.checked
+
+    console.log("checkbox",accepted);
+
+    if ( password.length < 6) {
+      toast.warn("Password must be at least 6 characters long.")
+      return
+    } else if (!/^(?=.*[A-Z])/.test(password)) {
+      toast.warn("Password must contain at least one uppercase letter")
+      return
+    }else if(!/^(?=.*[a-z])/.test(password)){
+      toast.warn("Password must contain at least one lowercase letter")
+      return
+    }else if(!accepted){
+      toast.warn("Please accept the terms and conditions before proceeding.")
+      return
+    }
 
     register(email,password)
     .then( () => {
@@ -39,21 +65,18 @@ const Register = () => {
         
       })
       .catch( () => {
-        setLoading(false)
       })
     })
     .catch( () => {
 
       toast.error(`Oops! Registration failed. Please check your information and try again.`)
-      // console.log(error);
-      setLoading(false)
 
     })
 
   }
 
 
-  console.log(auth.currentUser);
+  // console.log(auth.currentUser);
 
     return (
         <>
@@ -109,11 +132,12 @@ const Register = () => {
               className: "before:content-none after:content-none",
             }}
           />
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
+          <div className=" relative ">
+          <Typography variant="h6" color="blue-gray" className="mb-3">
             Password
           </Typography>
           <Input
-            type="password"
+            type={ isShowPassword? "text" : "password"}
             name="password"
             required
             size="lg"
@@ -123,8 +147,18 @@ const Register = () => {
               className: "before:content-none after:content-none",
             }}
           />
+          <div onClick={handleShowPassword} className="absolute top-[50px] right-6">
+            {
+
+              isShowPassword? <FaEyeSlash className=" text-xl" /> : <FaEye className=" text-xl" />
+
+            }
+          </div>
+          </div>
+          
         </div>
         <Checkbox
+        name="terms"
           label={
             <Typography
               variant="small"
