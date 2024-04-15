@@ -1,5 +1,5 @@
 import { Card, Input, Checkbox, Typography } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa6";
 import { useContext } from "react";
@@ -10,6 +10,8 @@ const Login = () => {
 
   const {login} = useContext(AuthContext)
 
+  const navigate = useNavigate()
+
   const handleLogin = (e) => {
 
     e.preventDefault()
@@ -19,6 +21,8 @@ const Login = () => {
     login(email,password)
     .then( () => {
       toast.success("Congratulations! You've successfully Logged In.")
+      navigate("/")
+
     })
     .catch( () => {
       toast.error("Oops! Login failed. Please check your information and try again.")
