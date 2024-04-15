@@ -8,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 const Login = () => {
 
-  const {login, googleLogin, githubLogin} = useContext(AuthContext)
+  const {login, googleLogin, githubLogin, setLoading} = useContext(AuthContext)
 
   const navigate = useNavigate()
 
@@ -25,7 +25,8 @@ const Login = () => {
 
     })
     .catch( () => {
-      toast.error("Oops! Login failed. Please check your information and try again.")
+      toast.error("Oops! Login failed.Wrong email and password. Please check your information and try again.")
+      setLoading(false)
     })
   }
 
@@ -37,7 +38,9 @@ const Login = () => {
       navigate("/")
     })
     .catch( () => {
-      toast.error("Oops! Login failed. Please check your information and try again.")
+      toast.error("Oops! Login failed.Wrong email and password. Please check your information and try again.")
+      setLoading(false)
+
     })
   }
   const handleGithubLogin = () => {
@@ -48,7 +51,9 @@ const Login = () => {
       navigate("/")
     })
     .catch( () => {
-      toast.error("Oops! Login failed. Please check your information and try again.")
+      toast.error("Oops! Login failed.Wrong email and password. Please check your information and try again.")
+      setLoading(false)
+
     })
   }
   return (

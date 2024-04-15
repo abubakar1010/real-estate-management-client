@@ -14,7 +14,7 @@ import auth from "../../firebase/firebase.init";
 
 const Register = () => {
 
-  const {register,} = useContext(AuthContext)
+  const {register, setLoading} = useContext(AuthContext)
 
   console.log(register);
   
@@ -38,12 +38,15 @@ const Register = () => {
         toast.success("Congratulations! You've successfully registered.")
         
       })
-      .catch()
+      .catch( () => {
+        setLoading(false)
+      })
     })
     .catch( () => {
 
       toast.error(`Oops! Registration failed. Please check your information and try again.`)
       // console.log(error);
+      setLoading(false)
 
     })
 
