@@ -29,7 +29,7 @@ const Banner = () => {
                 <p className=" text-lg uppercase font-medium mt-5 mb-3">
                   The New Standard Of Luxury
                 </p>
-                <p className=" font-PlayFair font-bold text-2xl">
+                <p className="  font-PlayFair font-bold text-2xl">
                   With Every Purchase
                 </p>
                 <button className=" font-PlayFair bg-gradient-to-r from-[#ff0000] to-[#FF8938] mt-8 py-2 px-5 font-bold text-lg rounded-md ">
@@ -48,7 +48,7 @@ const Banner = () => {
                 <p className=" text-lg uppercase font-medium mt-5 mb-3">
                   Iconic Luxurious Collection
                 </p>
-                <p className=" font-PlayFair font-bold text-2xl">
+                <p className=" tracking-wider font-PlayFair font-bold text-2xl">
                   Exclusively at TraumHeim
                 </p>
                 <button className=" font-PlayFair bg-gradient-to-r from-[#ff0000] to-[#FF8938] mt-8 py-2 px-5 font-bold text-lg rounded-md ">
@@ -67,7 +67,7 @@ const Banner = () => {
                 <p className=" text-lg uppercase font-medium mt-5 mb-3">
                   Experience Iconic Swiss Elegance
                 </p>
-                <p className=" font-PlayFair font-bold text-2xl">
+                <p className=" font-PlayFair font-bold text-2xl tracking-wider">
                   Exclusively at TraumHeim
                 </p>
                 <button className=" font-PlayFair bg-gradient-to-r from-[#ff0000] to-[#FF8938] mt-8 py-2 px-5 font-bold text-lg rounded-md ">
@@ -84,84 +84,3 @@ const Banner = () => {
 
 export default Banner;
 
-// // Import Swiper React components
-// import { Swiper, SwiperSlide } from "swiper/react";
-
-// // Import Swiper styles
-// import "swiper/css";
-// import { Autoplay } from "swiper/modules";
-
-// const Banner = () => {
-//   return (
-//     <div>
-//       <Swiper
-//         spaceBetween={50}
-//         slidesPerView={3}
-//         onSlideChange={() => console.log("slide change")}
-//         onSwiper={(swiper) => console.log(swiper)}
-//         autoplay={{
-//           delay: 2500,
-//           disableOnInteraction: false,
-//         }}
-//         new modules={[Autoplay]}
-//       >
-//         <SwiperSlide>
-//           <img
-//             src={`https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65966/757402811230810274.jpg`}
-//             alt=""
-//           />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img
-//             src={`https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65966/757402811230810274.jpg`}
-//             alt=""
-//           />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img
-//             src={`https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65966/757402811230810274.jpg`}
-//             alt=""
-//           />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img
-//             src={`https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65966/757402811230810274.jpg`}
-//             alt=""
-//           />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img
-//             src={`https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65966/757402811230810274.jpg`}
-//             alt=""
-//           />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img
-//             src={`https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65966/757402811230810274.jpg`}
-//             alt=""
-//           />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img
-//             src={`https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65966/757402811230810274.jpg`}
-//             alt=""
-//           />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img
-//             src={`https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65966/757402811230810274.jpg`}
-//             alt=""
-//           />
-//         </SwiperSlide>
-//         <SwiperSlide>
-//           <img
-//             src={`https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65966/757402811230810274.jpg`}
-//             alt=""
-//           />
-//         </SwiperSlide>
-//       </Swiper>
-//     </div>
-//   );
-// };
-
-// export default Banner;
