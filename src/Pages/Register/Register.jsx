@@ -2,9 +2,7 @@ import {
     Card,
     Input,
     Checkbox,
-
     Typography,
-    Spinner,
   } from "@material-tailwind/react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
@@ -16,7 +14,7 @@ import auth from "../../firebase/firebase.init";
 
 const Register = () => {
 
-  const {register,loading} = useContext(AuthContext)
+  const {register,} = useContext(AuthContext)
 
   console.log(register);
   
@@ -51,15 +49,6 @@ const Register = () => {
 
   }
 
-  if (loading) {
-    return <>
-
-    <div className=" flex items-center justify-center h-screen">
-    <Spinner className=" w-8 h-8" color="purple" />
-    </div>
-    
-    </>
-  }
 
   console.log(auth.currentUser);
 

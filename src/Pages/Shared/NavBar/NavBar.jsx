@@ -5,7 +5,6 @@ import {
   Typography,
   Button,
   IconButton,
-  Spinner,
 } from "@material-tailwind/react";
 
 import nIcon from "../../../assets/navIcon.png";
