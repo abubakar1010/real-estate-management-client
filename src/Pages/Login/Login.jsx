@@ -8,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 const Login = () => {
 
-  const {login} = useContext(AuthContext)
+  const {login, googleLogin} = useContext(AuthContext)
 
   const navigate = useNavigate()
 
@@ -23,6 +23,18 @@ const Login = () => {
       toast.success("Congratulations! You've successfully Logged In.")
       navigate("/")
 
+    })
+    .catch( () => {
+      toast.error("Oops! Login failed. Please check your information and try again.")
+    })
+  }
+
+  const handleGoogleLogin = () => {
+
+    googleLogin()
+    .then(() => {
+      // console.log(result);
+      navigate("/")
     })
     .catch( () => {
       toast.error("Oops! Login failed. Please check your information and try again.")
@@ -106,7 +118,7 @@ const Login = () => {
               </span>
             </div>
 
-            <div className=" flex gap-4 border-2 border-[#4c4a4aae] items-center py-3 rounded-full justify-center">
+            <div onClick={handleGoogleLogin} className=" flex gap-4 border-2 border-[#4c4a4aae] items-center py-3 rounded-full justify-center cursor-pointer">
                 <FcGoogle className=" text-3xl" />
                 <p className=" text-lg font-medium text-[#151515ca]">Continue with Google</p>
             </div>
