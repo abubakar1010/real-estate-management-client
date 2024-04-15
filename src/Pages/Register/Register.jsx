@@ -4,8 +4,8 @@ import {
     Checkbox,
     Typography,
   } from "@material-tailwind/react";
-import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
@@ -19,6 +19,7 @@ const Register = () => {
   const {register} = useContext(AuthContext)
 
   const [isShowPassword, setIsShowPassword] = useState(false)
+  const navigate = useNavigate()
 
   // console.log(register);
 
@@ -63,13 +64,18 @@ const Register = () => {
       .then( () => {
         toast.success("Congratulations! You've successfully registered.")
         
+        setTimeout(() => {
+          navigate("/")
+        }, 3000);
       })
-      .catch( () => {
+      .catch( (error) => {
+        console.log(error);
       })
     })
-    .catch( () => {
+    .catch( (error) => {
 
       toast.error(`Oops! Registration failed. Please check your information and try again.`)
+      console.log(error);
 
     })
 
@@ -188,7 +194,7 @@ const Register = () => {
       </form>
     </Card>
             </div>
-            <ToastContainer autoClose={3000} />
+            <ToastContainer autoClose={2000} />
         </>
     );
 };
