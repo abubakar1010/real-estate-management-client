@@ -4,7 +4,7 @@ import {
     Checkbox,
     Typography,
   } from "@material-tailwind/react";
-import { useContext, useRef, useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast, ToastContainer } from 'react-toastify';
@@ -182,7 +182,7 @@ const Register = () => {
           }
           containerProps={{ className: "-ml-2.5" }}
         />
-        <button type="submit" className="mt-6 bg-gradient-to-l from-[#ff5d64ab] via-[#ff5d64ed] to-[#ff5d64a8] w-full py-3 rounded-lg font-bold text-white font-PlayFair text-xl" >
+        <button type="submit" className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938]  w-full py-3 rounded-lg font-bold text-white font-PlayFair text-xl" >
           sign up
         </button>
         <Typography color="gray" className="mt-4 text-center font-normal">

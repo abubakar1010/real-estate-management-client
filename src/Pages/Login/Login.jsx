@@ -1,4 +1,4 @@
-import { Card, Input, Checkbox, Typography } from "@material-tailwind/react";
+import { Card, Input, Typography } from "@material-tailwind/react";
 import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa6";
@@ -137,7 +137,7 @@ const Login = () => {
               </div>
             </div>
             
-            <button type="submit" className="mt-6 bg-gradient-to-l from-[#ff5d64ab] via-[#ff5d64ed] to-[#ff5d64a8] w-full py-3 rounded-lg font-bold text-white font-PlayFair text-xl">
+            <button type="submit" className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938] w-full py-3 rounded-lg font-bold text-white font-PlayFair text-xl">
               sign In
             </button>
             <Typography color="gray" className="mt-4 text-center font-normal">
