@@ -8,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 const Login = () => {
 
-  const {login, googleLogin} = useContext(AuthContext)
+  const {login, googleLogin, githubLogin} = useContext(AuthContext)
 
   const navigate = useNavigate()
 
@@ -32,6 +32,17 @@ const Login = () => {
   const handleGoogleLogin = () => {
 
     googleLogin()
+    .then(() => {
+      // console.log(result);
+      navigate("/")
+    })
+    .catch( () => {
+      toast.error("Oops! Login failed. Please check your information and try again.")
+    })
+  }
+  const handleGithubLogin = () => {
+
+    githubLogin()
     .then(() => {
       // console.log(result);
       navigate("/")
@@ -122,7 +133,7 @@ const Login = () => {
                 <FcGoogle className=" text-3xl" />
                 <p className=" text-lg font-medium text-[#151515ca]">Continue with Google</p>
             </div>
-            <div className=" flex gap-4 border-2 border-[#4c4a4aae] items-center py-3 rounded-full justify-center mt-6">
+            <div onClick={handleGithubLogin} className=" cursor-pointer flex gap-4 border-2 border-[#4c4a4aae] items-center py-3 rounded-full justify-center mt-6">
                 <FaGithub className=" text-3xl" />
                 <p className=" text-lg font-medium text-[#151515ca]">Continue with 
                 GitHub</p>
