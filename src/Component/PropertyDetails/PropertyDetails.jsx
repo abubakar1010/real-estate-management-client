@@ -1,5 +1,6 @@
 
 import { useLoaderData, useParams } from "react-router-dom";
+import DisplayPropertyDetails from "../DisplayPropertyDetails/DisplayPropertyDetails";
 
 const PropertyDetails = () => {
 
@@ -12,7 +13,9 @@ const PropertyDetails = () => {
     console.log(data,params, filteredData);
     return (
         <div>
-            
+            {
+                filteredData.map( element => <DisplayPropertyDetails key={element.id} element={element} />)
+            }
         </div>
     );
 };
