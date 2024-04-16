@@ -5,6 +5,7 @@ import {
   Typography,
   Button,
   IconButton,
+  Spinner,
 } from "@material-tailwind/react";
 
 import nIcon from "../../../assets/navIcon.png";
@@ -15,7 +16,16 @@ import UserProfile from "../../../Component/UserProfile/UserProfile";
 const NavBar = () => {
   const [openNav, setOpenNav] = React.useState(false);
 
-  const { user } = useContext(AuthContext);
+  const { user,logout, loading } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logout()
+      .then(() => {
+        // toast.success("You've successfully Logout.");
+      })
+      .catch(() => {
+      });
+  };
 
   React.useEffect(() => {
     window.addEventListener(
@@ -29,7 +39,10 @@ const NavBar = () => {
       <Typography as="li" variant="small" className="p-1 font-normal">
         <NavLink
           to={"/"}
-          className="flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold font-PlayFair  "
+          className={ ({isActive}) => 
+            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold font-PlayFair" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold font-PlayFair"
+            
+          }
         >
           Home
         </NavLink>
@@ -37,15 +50,21 @@ const NavBar = () => {
       <Typography as="li" variant="small" className="p-1 font-normal">
         <NavLink
           to={"/service"}
-          className="flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold font-PlayFair  "
+          className={ ({isActive}) => 
+            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold font-PlayFair" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold font-PlayFair"
+            
+          }
         >
           Service
         </NavLink>
       </Typography>
       <Typography as="li" variant="small" className="p-1 font-normal">
         <NavLink
-          to={"/blog"}
-          className="flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold font-PlayFair  "
+          to={"/login"}
+          className={ ({isActive}) => 
+            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold font-PlayFair" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold font-PlayFair"
+            
+          }
         >
           Blog
         </NavLink>
@@ -53,10 +72,16 @@ const NavBar = () => {
     </ul>
   );
 
+  if (loading) {
+    return <div className=" flex justify-center items-center h-screen">
+            <Spinner color="green" className=" w-14 h-14"></Spinner>
+        </div>
+  }
+
   return (
     <>
       <div className=" max-h-[768px]">
-        <Navbar className="sticky top-0 z-10 h-max max-w-full shadow-none rounded-none px-4 py-2 lg:px-8 lg:py-4 ">
+        <Navbar className="sticky top-0 z-10 h-max max-w-full shadow-none rounded-none py-2  lg:py-4 ">
           <div className="flex items-center justify-between text-blue-gray-900">
             <div className=" flex items-center gap-4">
               <div>
@@ -67,17 +92,22 @@ const NavBar = () => {
                 href="#"
                 className="mr-4 font-PlayFair cursor-pointer py-1.5 font-bold text-3xl "
               >
-                Traum<span className=" text-[#FF5D64]">Heim</span>
+                Traum<span className=" text-[#ff0000cf]">Heim</span>
               </Typography>
             </div>
             <div className="mr-4 hidden lg:block">{navList}</div>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-x-8">
+                {
+                  user && <button onClick={handleLogout} className="hidden lg:inline-block bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
+                  <span>Log Out</span>
+                </button>
+                }
                 {user ? (
                   <UserProfile />
                 ) : (
                   <Link to={"/login"}>
-                    <button className="hidden lg:inline-block bg-gradient-to-l from-[#ff5d65e3] to-[#f2555dc5] py-2 px-5 text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
+                    <button className="hidden lg:inline-block bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
                       <span>Log In</span>
                     </button>
                   </Link>

@@ -15,6 +15,8 @@ import { Tooltip } from "@material-tailwind/react";
 const UserProfile = () => {
   const { logout, user } = useContext(AuthContext);
 
+  
+
   const handleLogout = () => {
     logout()
       .then(() => {

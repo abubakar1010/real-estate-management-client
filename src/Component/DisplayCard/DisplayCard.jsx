@@ -1,16 +1,19 @@
-import { FaStar } from "react-icons/fa";
+import {  FaStar } from "react-icons/fa";
 import { BiDollar } from "react-icons/bi";
-import { IoLocation } from "react-icons/io5";
+import { IoBedOutline, IoLocation } from "react-icons/io5";
 import PropTypes from "prop-types"
+import { NavLink } from "react-router-dom";
+import { MdOutlineKitchen } from "react-icons/md";
+import { LuBath } from "react-icons/lu";
 
 
 const DisplayCard = ({ element }) => {
   console.log(element);
 
-  const { estate_title, image, location, price, status, rating, facilities } = element;
+  const { id, estate_title, image, location, price, status, rating, facilities,property_details } = element;
   return (
-    <div className=" flex justify-center items-center h-[470px]">
-      <div className=" shadow-xl border-2 border-[#0003] h-full">
+    <div className=" flex justify-center items-center h-[510px] ">
+      <div className=" shadow-xl border-2 border-[#0003] h-full rounded-xl">
         <div className=" ">
           <img
             src={image}
@@ -43,6 +46,20 @@ const DisplayCard = ({ element }) => {
                     <p className=" border-2 border-[#000000a4] h-[16px]"></p>
                     <p className="pl-2 text-[#000000de] font-PlayFair">{facilities[2]}</p>
                 </div>
+                <div className="flex items-center gap-12 mb-4 px-4">
+                <div className=" flex items-center gap-2">
+                  <IoBedOutline className=" text-2xl"></IoBedOutline>
+                  <p className=" text-xl font-medium font-PlayFair">{property_details.bedrooms}</p>
+                </div>
+                <div className=" flex items-center gap-2">
+                  <LuBath className=" text-2xl"></LuBath>
+                  <p className=" text-xl font-medium font-PlayFair">{property_details.bathrooms}</p>
+                </div>
+                <div className=" flex items-center gap-2">
+                  <MdOutlineKitchen className=" text-2xl"></MdOutlineKitchen>
+                  <p className=" text-xl font-medium font-PlayFair">{property_details.kitchen}</p>
+                </div>
+              </div>
         <div className=" flex justify-between px-4 pb-4">
           <p className=" font-bold font-PlayFair text-xl">For {status}</p>
           <div className=" flex items-center gap-1">
@@ -57,9 +74,11 @@ const DisplayCard = ({ element }) => {
             <p>{location}</p>
         </div>
         <div>
+        <NavLink to={`/details/${id}`}>
         <button className="hidden lg:inline-block bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-4 text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
-            View Details
+            View Property
         </button>
+        </NavLink>
         </div>
         </div>
       </div>
