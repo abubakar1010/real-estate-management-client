@@ -8,6 +8,7 @@ import PrivateRoute from "../Private/PrivateRoute";
 import PropertyDetails from "../Component/PropertyDetails/PropertyDetails";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import Blog from "../Component/Blog/Blog";
+import BlogDetails from "../Component/Banner/BlogDetails";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,13 @@ const router = createBrowserRouter([
             </PrivateRoute>,
             loader: () => fetch('../../public/blog.json')
         },
+        {
+          path: "/blogDetails/:id",
+          element: <PrivateRoute>
+            <BlogDetails />
+          </PrivateRoute>,
+          loader: () => fetch('../../public/blog.json')
+      },
         {
             path: "/update",
             element: <PrivateRoute>
