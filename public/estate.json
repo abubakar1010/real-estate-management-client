@@ -8,10 +8,12 @@
         "status": "Sale",
         "area": "22,000 sq ft",
         "living_area" : "9,900 sq ft",
-        "location": "Kuala Lumpur, Malaysia",
+        "location": "Zurich, Switzerland",
+        "city": "Zurich, Zu 56242",
         "position": [3.1607569966484563, 101.67242046567831],
         "image": "https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65855/1852250456382569896.jpg",
         "facilities": [
+            
             "Garden",
             "Fireplace",
             "Wooden Floors",
@@ -22,7 +24,15 @@
             "Library",
             "Tennis Court",
             "Gym",
-            "Mountain View"
+            "Mountain View",
+            "Outdoor Shower",
+            "Balcony",
+            "Wet Bar",
+            "Private Elevator",
+            "Dining Area",
+            "Washer",
+            "Luxury Property",
+            "Hot Water"
         ],
         "property_details": {
             "bedrooms": 8,
@@ -42,9 +52,11 @@
         "area": "32,000 sq ft",
         "living_area" : "12,300 sq ft",
         "location": "Williamstown, Australia",
+        "city": "Williamstown, Wi 36240",
         "position": [-37.859445579401935, 144.822554542076],
         "image": "https://lh3.googleusercontent.com/GBTCHK6eqyqQOcgRsX-PcmZ9OGKYFGdFXKWGA-ZoekJPV86NP7iWbzdS9JjVXVmqelQRt2pj3GQPNJbkcyeyLCc_58U_gp5QAYKm3w=rw-w1440-h843-n-l60",
         "facilities": [
+            
             "Balcony",
             "Parking",
             "Security System",
@@ -55,7 +67,15 @@
             "Fitness Center",
             "Playground",
             "Pet-friendly",
-            "Laundry Service"
+            "Laundry Service",
+            "Outdoor Shower",
+            "Balcony",
+            "Wet Bar",
+            "Private Elevator",
+            "Dining Area",
+            "Washer",
+            "Luxury Property",
+            "Hot Water"
         ],
         "property_details": {
             "bedrooms": 6,
@@ -63,7 +83,7 @@
             "kitchen": 1,
             "parking": "Underground"
         },
-        "price_per_day": 100,
+        "price_per_month": 100,
         "rating": 4.2
     },
     {
@@ -76,9 +96,11 @@
         "area": "25,0000 sq ft",
         "living_area" : "9,570 sq ft",
         "location": "Melbourne, Australia",
+        "city": "Melbourne, Me 26540",
         "position": [-37.81191981309246, 144.95952595421588],
         "image": "https://cdnparap20.paragonrels.com/ParagonImages/Property/P2/LCBORMLS/65881/2/0/0/f83665effa4fe80eb1130756326c0519/0/98dbd4a4dac3ee545a6661d92ad160a3/65881-a2241a3c-ee8f-4a1f-b2d2-690848359910.JPG",
         "facilities": [
+            
             "Backyard",
             "Garage",
             "Community Pool",
@@ -89,7 +111,15 @@
             "Basketball Court",
             "Gated Community",
             "Yoga Studio",
-            "Greenbelt"
+            "Greenbelt",
+            "Outdoor Shower",
+            "Balcony",
+            "Wet Bar",
+            "Private Elevator",
+            "Dining Area",
+            "Washer",
+            "Luxury Property",
+            "Hot Water"
         ],
         "property_details": {
             "bedrooms": 6,
@@ -109,9 +139,11 @@
         "area": "32,800 sq ft",
         "living_area" : "6,700 sq ft",
         "location": "Tokyo, Japan",
+        "city": "Tokyo, To 36248",
         "position": [35.78341832485879, 139.72613290450528],
         "image": "https://img.jamesedition.com/listing_images/2023/12/07/12/18/57/bb01673e-745d-417d-942c-73d7d855a731/je/1100xxs.jpg",
         "facilities": [
+            
             "Swimming Pool",
             "Fitness Center",
             "Concierge Service",
@@ -122,7 +154,15 @@
             "Valet Parking",
             "Wine Cellar",
             "Dog Park",
-            "Electric Vehicle Charging Stations"
+            "Electric Vehicle, Charging Stations",
+            "Outdoor Shower",
+            "Balcony",
+            "Wet Bar",
+            "Private Elevator",
+            "Dining Area",
+            "Washer",
+            "Luxury Property",
+            "Hot Water"
         ],
         "property_details": {
             "bedrooms": 3,
@@ -142,12 +182,22 @@
         "area": "26,000 sq ft",
         "living_area" : "12,700 sq ft",
         "location": "Basel, Switzerland",
+        "city": "Basel, Ba 26640",
         "position": [47.55934179515054, 7.586849963633109],
         "image": "https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65463/1688783102332492572.jpg",
         "facilities": [
+            
             "Furnished Rooms",
             "Study Areas",
-            "Fitness Center"
+            "Fitness Center",
+            "Outdoor Shower",
+            "Balcony",
+            "Wet Bar",
+            "Private Elevator",
+            "Dining Area",
+            "Washer",
+            "Luxury Property",
+            "Hot Water"
         ],
         "property_details": {
             "bedrooms": 4,
@@ -155,7 +205,7 @@
             "kitchen": 1,
             "parking": "On-site"
         },
-        "price_per_day": 30,
+        "price_per_month": 30,
         "rating": 4.0
     },
     {
@@ -168,9 +218,11 @@
         "area": "29,000 sq ft",
         "living_area" : "14,700 sq ft",
         "location": "Zermatt, Switzerland",
+        "city": "Zermatt, Ze 26940",
         "position": [46.011414460964666, 7.65472300249026],
         "image": "https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65855/665063201256581890.jpg",
         "facilities": [
+            
             "Restaurant",
             "Library",
             "Fitness Center",
@@ -182,7 +234,15 @@
             "On-site Maintenance",
             "Social Events",
             "Bicycle Storage",
-            "Coffee Bar"
+            "Coffee Bar",
+            "Outdoor Shower",
+            "Balcony",
+            "Wet Bar",
+            "Private Elevator",
+            "Dining Area",
+            "Washer",
+            "Luxury Property",
+            "Hot Water"
         ],
         "property_details": {
             "bedrooms": 6,
@@ -190,7 +250,7 @@
             "kitchen": 2,
             "parking": "Covered"
         },
-        "price_per_day": 150,
+        "price_per_month": 150,
         "rating": 4.5
     },
     {
@@ -203,9 +263,11 @@
         "area": "33,000 sq ft",
         "living_area" : "6,700 sq ft",
         "location": "Dubai, UAE",
+        "city": "Dubai, Du 36340",
         "position": [25.206139506905977, 55.27133301690149],
         "image": "https://dq1niho2427i9.cloudfront.net/c60b43e3-96d9-447c-b364-47f8d14f0e76/1120980468.jpg",
         "facilities": [
+            
             "Private Pool",
             "Oceanfront Terrace",
             "BBQ Area",
@@ -216,7 +278,15 @@
             "Sun Deck",
             "Gated Entry",
             "Guest House",
-            "Water Sports Equipment"
+            "Water Sports Equipment",
+            "Outdoor Shower",
+            "Balcony",
+            "Wet Bar",
+            "Private Elevator",
+            "Dining Area",
+            "Washer",
+            "Luxury Property",
+            "Hot Water"
         ],
         "property_details": {
             "bedrooms": 4,
@@ -224,7 +294,7 @@
             "kitchen": 1,
             "parking": "Private"
         },
-        "price_per_day": 250,
+        "price_per_month": 250,
         "rating": 4.9
     },
     {
@@ -237,9 +307,11 @@
         "area": "52,200 sq ft",
         "living_area" : "21,700 sq ft",
         "location": "Zurich, Switzerland",
+        "city": "Zurich, Zu 56242",
         "position": [47.375784749388245, 8.551494834508043],
         "image": "https://dq1niho2427i9.cloudfront.net/c60b43e3-96d9-447c-b364-47f8d14f0e76/941369693.jpg",
         "facilities": [
+            
             "Barn",
             "Pond",
             "Outdoor Kitchen",
@@ -252,7 +324,15 @@
             "Workshop",
             "Pond",
             "Outdoor Kitchen",
-            "Stables"
+            "Stables",
+            "Outdoor Shower",
+            "Balcony",
+            "Wet Bar",
+            "Private Elevator",
+            "Dining Area",
+            "Washer",
+            "Luxury Property",
+            "Hot Water"
         ],
         "property_details": {
             "bedrooms": 3,
@@ -272,9 +352,11 @@
         "area": "42,000 sq ft",
         "living_area" : "16,700 sq ft",
         "location": "Paris, France",
+        "city": "Paris, Pa 46240",
         "position": [48.854081839156756, 2.3480615187998013],
         "image": "https://lh3.googleusercontent.com/T6iybCMH60el6TnIHNpOyDqVSbxyaYQCNJd0f9UbxcMcqwCt3VnSya2OjHoFwXwinefRHjEHBg1nlWGhoyCaWJljhc5yPIaWaQ5hGw=rw-w768-h433-n-l60",
         "facilities": [
+            
             "Exposed Brick Walls",
             "High Ceilings",
             "Roof Deck",
@@ -287,7 +369,15 @@
             "Gym",
             "Roof Deck",
             "Concierge Service",
-            "Garage Parking"
+            "Garage Parking",
+            "Outdoor Shower",
+            "Balcony",
+            "Wet Bar",
+            "Private Elevator",
+            "Dining Area",
+            "Washer",
+            "Luxury Property",
+            "Hot Water"
         ],
         "property_details": {
             "bedrooms": 2,
@@ -307,9 +397,11 @@
         "area": "74,000 sq ft",
         "living_area" : "32,700 sq ft",
         "location": "Geneva, Switzerland",
+        "city": "Geneva, Ge 76440",
         "position": [46.20399096844954, 6.141664652272082],
         "image": "https://dq1niho2427i9.cloudfront.net/c60b43e3-96d9-447c-b364-47f8d14f0e76/-2123150905.jpg",
         "facilities": [
+            
             "Lakefront",
             "Deck",
             "Fire Pit",
@@ -320,7 +412,15 @@
             "Hiking Trails",
             "Barbecue Grill",
             "Canoe"
-            
+            ,
+            "Outdoor Shower",
+            "Balcony",
+            "Wet Bar",
+            "Private Elevator",
+            "Dining Area",
+            "Washer",
+            "Luxury Property",
+            "Hot Water"
         ],
         "property_details": {
             "bedrooms": 3,
@@ -328,7 +428,7 @@
             "kitchen": 1,
             "parking": "On-site"
         },
-        "price_per_day": 200,
+        "price_per_month": 200,
         "rating": 4.8
     }
 ]
