@@ -28,7 +28,7 @@ const Banner = () => {
         <SwiperSlide style={{width: "100%"}}>
           <div className=" bg-[url('https://i.postimg.cc/NF3pLz19/r-architecture-2g-Dwl-Iim3-Uw-unsplash.jpg')] w-ful h-[520px] bg-cover bg-center bg-no-repeat my-8 rounded-xl relative ">
             <div className="absolute inset-0 grid h-full w-full  items-center bg-[#1d1d1d70] rounded-xl">
-              <div className="text-white pl-56">
+              <div className="text-white lg:pl-56 pl-12">
                 <h1 className=" text-6xl font-extrabold font-PlayFair">Experience</h1>
                 <p className=" text-lg uppercase font-medium mt-5 mb-3">
                   The New Standard Of Luxury
@@ -47,7 +47,7 @@ const Banner = () => {
         <SwiperSlide style={{width: "100%"}}>
           <div className=" bg-[url('https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65958/-1247076084590263335.jpg')] w-full h-[520px] bg-cover bg-center bg-no-repeat my-8 rounded-xl relative ">
             <div className="absolute inset-0 grid h-full w-full  items-center bg-[#1d1d1d70] rounded-xl">
-              <div className="text-white pl-56">
+              <div className="text-white lg:pl-56 pl-12">
                 <h1 className=" text-6xl font-extrabold font-PlayFair">Luxury Condo</h1>
                 <p className=" text-lg uppercase font-medium mt-5 mb-3">
                   Iconic Luxurious Collection
@@ -66,7 +66,7 @@ const Banner = () => {
         <SwiperSlide style={{width: "100%"}}>
           <div className=" bg-[url('https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65966/757402811230810274.jpg')] w-full h-[520px] bg-cover bg-center bg-no-repeat my-8 rounded-xl relative ">
             <div className="absolute inset-0 grid h-full w-full  items-center bg-[#1d1d1d70] rounded-xl">
-              <div className="text-white pl-56">
+              <div className="text-white lg:pl-56 pl-12">
                 <h1 className=" text-6xl font-extrabold">Cozy Cottage</h1>
                 <p className=" text-lg uppercase font-medium mt-5 mb-3">
                   Experience Iconic Swiss Elegance

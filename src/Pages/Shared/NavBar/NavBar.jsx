@@ -3,7 +3,6 @@ import {
   Navbar,
   MobileNav,
   Typography,
-  Button,
   IconButton,
   Spinner,
 } from "@material-tailwind/react";
@@ -127,7 +126,7 @@ const NavBar = () => {
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-x-8">
                 {
-                  user && <button onClick={handleLogout} className="hidden lg:inline-block bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
+                  user && <button onClick={handleLogout} className="hidden xl:inline-block bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
                   <span>Log Out</span>
                 </button>
                 }
@@ -135,7 +134,7 @@ const NavBar = () => {
                   <UserProfile />
                 ) : (
                   <Link to={"/login"}>
-                    <button className="hidden lg:inline-block bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
+                    <button className="hidden xl:inline-block bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
                       <span>Log In</span>
                     </button>
                   </Link>
@@ -143,7 +142,7 @@ const NavBar = () => {
               </div>
               <IconButton
                 variant="text"
-                className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+                className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent xl:hidden"
                 ripple={false}
                 onClick={() => setOpenNav(!openNav)}
               >
@@ -182,13 +181,16 @@ const NavBar = () => {
           </div>
           <MobileNav open={openNav}>
             {navList}
-            <div className="flex items-center gap-x-1">
-              <Button fullWidth variant="text" size="sm" className="">
-                <span>Log In</span>
-              </Button>
-              <Button fullWidth variant="gradient" size="sm" className="">
-                <span>Sign in</span>
-              </Button>
+            <div className="flex items-center gap-x-7">
+              
+                  <button onClick={handleLogout} className=" hover:bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 hover:text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500 w-full text-[#2e2d2d] border border-[#FF8938]  ">
+                  <span>Log Out</span>
+                </button>
+                <Link to={"/login"} className=" w-full">
+                    <button className="w-full bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-3 text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
+                      <span>Log In</span>
+                    </button>
+                  </Link>
             </div>
           </MobileNav>
         </Navbar>

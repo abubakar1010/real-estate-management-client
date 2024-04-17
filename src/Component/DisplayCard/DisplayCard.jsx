@@ -68,7 +68,7 @@ const DisplayCard = ({ element }) => {
         </div>
         <div>
         <NavLink to={`/details/${id}`}>
-        <button className="hidden lg:inline-block bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-4 text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
+        <button className=" bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-4 text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
             View Property
         </button>
         </NavLink>
