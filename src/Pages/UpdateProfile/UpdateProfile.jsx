@@ -33,8 +33,8 @@ const UpdateProfile = () => {
   }
   return (
     <>
-      <div className=" my-28 flex gap-16 ">
-        <div className=" shadow-xl flex justify-center w-[720px] border border-[#29282859] rounded-sm py-8">
+      <div className=" my-28 lg:flex gap-16 ">
+        <div className=" shadow-xl lg:flex justify-center lg:w-[720px] border border-[#29282859] rounded-sm py-8 mb-28 lg:mb-auto">
           <div>
             <div className=" text-center mb-7">
               <Avatar
@@ -56,7 +56,7 @@ const UpdateProfile = () => {
           </div>
         </div>
         <div className="shadow-xl flex justify-center w-full border border-[#29282859] rounded-sm pt-8">
-          <form onSubmit={handleUpdate} className="w-full px-8">
+          <form onSubmit={handleUpdate} className="w-full px-8 mb-7 lg:mb-2">
             <h1 className=" font-bold text-xl mb-6 font-PlayFair">
               Update Your Profile:
             </h1>
