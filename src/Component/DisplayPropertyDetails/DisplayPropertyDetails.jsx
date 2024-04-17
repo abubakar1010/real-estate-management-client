@@ -99,7 +99,7 @@ const DisplayPropertyDetails = ({ element }) => {
                 closets complement the master suite.
               </p>
 
-              <div className=" flex gap-6 justify-center my-12">
+              <div className=" grid place-content-center md:grid-cols-2 xl:flex gap-6 justify-center my-12">
                 <div className=" border px-4 py-8 shadow-sm w-72 inline-block ">
                   <IoHomeOutline className=" text-5xl mb-6" />
                   <h1 className=" text-xl font-bold font-PlayFair mb-2">
@@ -133,7 +133,7 @@ const DisplayPropertyDetails = ({ element }) => {
               <h1 className=" text-2xl font-bold font-PlayFair mt-16  mx-16">
                 Property Details:
               </h1>
-              <div className=" flex gap-16 mt-12 mb-16 mx-16 justify-between">
+              <div className=" grid place-content-center grid-cols-2 md:grid-cols-3 xl:flex gap-16 mt-12 mb-16 mx-16 justify-between">
                 <div>
                   <IoBedOutline className=" text-4xl"></IoBedOutline>
                   <p className=" text-lg uppercase font-medium mt-2 leading-relaxed font-PlayFair">
@@ -166,7 +166,7 @@ const DisplayPropertyDetails = ({ element }) => {
                 </div>
               </div>
 
-              <div className=" flex gap-6 justify-between my-24">
+              <div className=" flex flex-col xl:flex-row gap-6 justify-between my-24">
                 <div className="  relative w-full">
                   <h1 className=" text-xl font-bold mb-12">Key Features</h1>
                   <div className=" grid grid-cols-3 place-content-center">
@@ -206,8 +206,8 @@ const DisplayPropertyDetails = ({ element }) => {
                   </p>
                 </div>
 
-                <div className=" shadow-xl px-8 py-6 border border-[#00000086]  h-[430px]">
-                  <div className=" w-[320px]">
+                <div className=" shadow-xl px-8 py-6 border border-[#00000086]  h-[430px] mt-20 xl:mt-0 ">
+                  <div className=" xl:w-[320px]">
                     <div className=" flex items-center gap-6">
                       <div>
                       <img
@@ -251,9 +251,10 @@ const DisplayPropertyDetails = ({ element }) => {
                   </div>
                 </div>
               </div>
-              <div className=" flex gap-6 ">
-                <div className=" w-[740px]  ">
-                  <img src={image} alt="" className=" max-w-[670px] h-full object-cover" />
+              <div className=" hidden lg:hidden xl:inline-block md:inline-block ">
+              <div className=" flex flex-col xl:flex-row gap-6 ">
+                <div className=" md:hidden w-[740px] mb-12 lg:mb-0  ">
+                  <img src={image} alt="" className="w-full xl:max-w-[670px] h-full object-cover" />
                 </div>
                 <div className=" w-full ">
                   <div>
@@ -399,6 +400,7 @@ const DisplayPropertyDetails = ({ element }) => {
                   </div>
                   <button className=" border-2 py-2 px-24 hover:bg-[#042D49] hover:text-white border-[#042D49] rounded-sm duration-700 cursor-pointer  hover:duration-500 w-full">NEXT</button>
                 </div>
+              </div>
               </div>
             </div>
             <div className=" mb-12 mt-48">
