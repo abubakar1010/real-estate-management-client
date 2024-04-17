@@ -16,12 +16,13 @@ import UserProfile from "../../../Component/UserProfile/UserProfile";
 const NavBar = () => {
   const [openNav, setOpenNav] = React.useState(false);
 
-  const { user,logout, loading } = useContext(AuthContext);
+  const { user,logout, loading, setUserData, userData } = useContext(AuthContext);
 
   const handleLogout = () => {
     logout()
       .then(() => {
         // toast.success("You've successfully Logout.");
+        setUserData(null)
       })
       .catch(() => {
       });
@@ -33,7 +34,6 @@ const NavBar = () => {
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
-
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
       <Typography as="li" variant="small" className="p-1 font-normal">
@@ -69,6 +69,19 @@ const NavBar = () => {
           Blog
         </NavLink>
       </Typography>
+      {
+        user && <Typography as="li" variant="small" className="p-1 font-normal">
+        <NavLink
+          to={"/update"}
+          className={ ({isActive}) => 
+            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold font-PlayFair" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold font-PlayFair"
+            
+          }
+        >
+          Update Profile
+        </NavLink>
+      </Typography>
+      }
     </ul>
   );
 
@@ -103,7 +116,7 @@ const NavBar = () => {
                   <span>Log Out</span>
                 </button>
                 }
-                {user ? (
+                {userData || user ? (
                   <UserProfile />
                 ) : (
                   <Link to={"/login"}>

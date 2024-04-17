@@ -1,87 +1,85 @@
 import { createContext, useEffect, useState } from "react";
-import PropTypes from "prop-types"
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import PropTypes from "prop-types";
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
 import auth from "../firebase/firebase.init";
 import { GoogleAuthProvider } from "firebase/auth";
 import { GithubAuthProvider } from "firebase/auth";
 
+export const AuthContext = createContext(null);
 
-export const AuthContext = createContext(null)
+const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
+  const [userData, setUserData] = useState(null);
 
-const AuthProvider = ({children}) => {
-    
-    const [user, setUser] = useState(null)
+  const [loading, setLoading] = useState(true);
 
-    const [loading, setLoading] = useState(true)
+  const register = (email, password) => {
+    setLoading(true);
+    return createUserWithEmailAndPassword(auth, email, password);
+  };
 
-    const register = (email, password) => {
+  const logout = () => {
+    setLoading(true);
+    return signOut(auth);
+  };
 
-        setLoading(true)
-        return createUserWithEmailAndPassword(auth,email,password)
-    }
+  const login = (email, password) => {
+    setLoading(true);
+    return signInWithEmailAndPassword(auth, email, password);
+  };
 
-    const logout = () => {
-        setLoading(true)
-        return signOut(auth)
-    }
+  useEffect(() => {
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
 
-    const login = (email, password) => {
+    return () => {
+      unSubscribe();
+    };
+  }, []);
 
-        setLoading(true)
-        return signInWithEmailAndPassword(auth, email, password)
-    }
+  // implement login with google
 
-    useEffect( () => {
-        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-                setUser(currentUser)
-                setLoading(false)
-        })
+  const googleProvider = new GoogleAuthProvider();
 
-        return () => {
-            unSubscribe()
-        }
-    },[])
+  const googleLogin = () => {
+    return signInWithPopup(auth, googleProvider);
+  };
 
+  // implement login with github
 
-    // implement login with google
-    
-    const googleProvider = new GoogleAuthProvider()
+  const gitHubProvider = new GithubAuthProvider();
 
-    const googleLogin = () => {
+  const githubLogin = () => {
+    return signInWithPopup(auth, gitHubProvider);
+  };
 
-        return signInWithPopup(auth, googleProvider)
-
-    }
-
-    // implement login with github
-
-    const gitHubProvider = new GithubAuthProvider()
-
-    const githubLogin = () => {
-
-        return signInWithPopup(auth, gitHubProvider)
-
-    }
-
-    const authInfo = {
-        user,
-        register,
-        loading,
-        logout,
-        setLoading,
-        login,
-        googleLogin,
-        githubLogin
-    }
-    return (
-        <AuthContext.Provider value={authInfo}>
-            {children}
-        </AuthContext.Provider>
-    );
+  const authInfo = {
+    user,
+    register,
+    loading,
+    logout,
+    setLoading,
+    login,
+    googleLogin,
+    githubLogin,
+    userData,
+    setUserData,
+  };
+  return (
+    <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
+  );
 };
 
 AuthProvider.propTypes = {
-    children: PropTypes.node
-}
+  children: PropTypes.node,
+};
 
 export default AuthProvider;

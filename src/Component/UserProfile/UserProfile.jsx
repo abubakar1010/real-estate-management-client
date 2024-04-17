@@ -6,21 +6,28 @@ import {
   Avatar,
   Typography,
 } from "@material-tailwind/react";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { IoPower } from "react-icons/io5";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
 import { Tooltip } from "@material-tailwind/react";
 
 const UserProfile = () => {
-  const { logout, user } = useContext(AuthContext);
+  const { logout, user, userData, setUserData } = useContext(AuthContext);
 
-  
+  useEffect(()=> {
+
+    setUserData(user)
+  },[])
+
+
+  console.log(user, userData);
 
   const handleLogout = () => {
     logout()
       .then(() => {
         // toast.success("You've successfully Logout.");
+        setUserData(null)
       })
       .catch(() => {
         toast.error(
@@ -36,7 +43,7 @@ const UserProfile = () => {
       <div>
         <Menu>
         <Tooltip
-              content={`${user?.displayName}`}
+              content={`${ userData?.displayName || user?.displayName}`}
               animate={{
                 mount: { scale: 1, y: 5 },
                 unmount: { scale: 0, y: 20 },
@@ -47,9 +54,9 @@ const UserProfile = () => {
             
               <Avatar
                 variant="circular"
-                alt={`${user?.displayName}`}
+                alt={`${ userData?.displayName || user?.displayName}`}
                 className="cursor-pointer"
-                src={ user? user?.photoURL : "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"}
+                src={ user || userData? userData?.photoURL || user?.photoURL : "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"}
 
                 // src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
               />

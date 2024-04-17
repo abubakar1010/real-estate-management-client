@@ -16,7 +16,7 @@ import { FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
 
-  const {register} = useContext(AuthContext)
+  const {register, user, setUserData, userData} = useContext(AuthContext)
 
   const [isShowPassword, setIsShowPassword] = useState(false)
   const navigate = useNavigate()
@@ -60,17 +60,21 @@ const Register = () => {
       updateProfile( auth.currentUser, {
         displayName: `${name}`,
         photoURL: `${photo}`
+
       })
       .then( () => {
         toast.success("Congratulations! You've successfully registered.")
         
         setTimeout(() => {
           navigate("/")
-        }, 3000);
+        }, 1400);
+
+
       })
       .catch( (error) => {
         console.log(error);
       })
+
     })
     .catch( (error) => {
 
@@ -81,7 +85,9 @@ const Register = () => {
 
   }
 
+  console.log(user, userData);
 
+  setUserData(user)
   // console.log(auth.currentUser);
 
     return (
@@ -194,7 +200,7 @@ const Register = () => {
       </form>
     </Card>
             </div>
-            <ToastContainer autoClose={2000} />
+            <ToastContainer autoClose={1000} />
         </>
     );
 };

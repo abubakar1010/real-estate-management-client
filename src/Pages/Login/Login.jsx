@@ -8,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 const Login = () => {
 
-  const {login, googleLogin, githubLogin,} = useContext(AuthContext)
+  const {login, googleLogin, githubLogin, setUserData,user} = useContext(AuthContext)
 
   const [isError, setIsError] = useState(false)
   const navigate = useNavigate()
@@ -33,6 +33,8 @@ const Login = () => {
     .then( () => {
 
       toast.success("Congratulations! You've successfully Logged In.")
+      setUserData(user)
+      
       setTimeout(() => {
         navigate(location?.state? location.state : "/")
       }, 3000);
@@ -68,7 +70,7 @@ const Login = () => {
       toast.success("Congratulations! You've successfully Logged In.")
       setTimeout(() => {
         navigate(location?.state? location.state : "/")
-      }, 3000);
+      }, 1200);
     })
     .catch( () => {
   
@@ -172,7 +174,7 @@ const Login = () => {
           </form>
         </Card>
       </div>
-      <ToastContainer autoClose={2000} />
+      <ToastContainer autoClose={800} />
     </>
   );
 };
