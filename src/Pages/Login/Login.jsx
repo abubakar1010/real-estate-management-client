@@ -1,5 +1,5 @@
 import { Card, Input, Typography } from "@material-tailwind/react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa6";
 import { useContext, useState } from "react";
@@ -14,6 +14,10 @@ const Login = () => {
   const navigate = useNavigate()
 
   const [isShowPassword, setIsShowPassword] = useState(false)
+
+  const location = useLocation()
+
+  console.log(location);
 
   const handleShowPassword = () => {
     setIsShowPassword(!isShowPassword)
@@ -30,7 +34,7 @@ const Login = () => {
 
       toast.success("Congratulations! You've successfully Logged In.")
       setTimeout(() => {
-        navigate("/")
+        navigate(location?.state? location.state : "/")
       }, 3000);
 
     })
@@ -46,7 +50,7 @@ const Login = () => {
     googleLogin()
     .then(() => {
       setTimeout(() => {
-        navigate("/")
+        navigate(location?.state? location.state : "/")
       }, 3000);
       toast.success("Congratulations! You've successfully Logged In.")
     })
@@ -63,7 +67,7 @@ const Login = () => {
     .then(() => {
       toast.success("Congratulations! You've successfully Logged In.")
       setTimeout(() => {
-        navigate("/")
+        navigate(location?.state? location.state : "/")
       }, 3000);
     })
     .catch( () => {
