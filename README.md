@@ -11,7 +11,7 @@ Currently, two official plugins are available:
 
 </br>
 
-Website Link: <a href="https://inkverse-react-app.netlify.app/](https://ph-assignment-09-7744b.web.app/" target="_blank">TraumHeim</a>
+Website Link: <a href="https://ph-assignment-09-7744b.web.app" target="_blank">TraumHeim</a>
 
 </br>
 
