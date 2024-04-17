@@ -210,11 +210,11 @@ const DisplayPropertyDetails = ({ element }) => {
                   <div className=" w-[320px]">
                     <div className=" flex items-center gap-6">
                       <div>
-                        <img
-                          src={user?.photoURL}
-                          alt=""
-                          className=" w-14 h-14 rounded-full"
-                        />
+                      <img
+                
+                className="cursor-pointer max-w-[80px] rounded-full w-14 h-14  object-cover"
+                src={user?.photoURL}
+              />
                       </div>
                       <div>
                         <p className=" font-bold font-PlayFair text-xl">

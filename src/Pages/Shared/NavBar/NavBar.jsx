@@ -58,9 +58,23 @@ const NavBar = () => {
           Service
         </NavLink>
       </Typography>
-      <Typography as="li" variant="small" className="p-1 font-normal">
+      {
+        user? "" : <Typography as="li" variant="small" className="p-1 font-normal">
         <NavLink
-          to={"/login"}
+          to={"/contact"}
+          className={ ({isActive}) => 
+            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold font-PlayFair" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold font-PlayFair"
+            
+          }
+        >
+          Contact Us
+        </NavLink>
+      </Typography>
+      }
+      {
+        user && <Typography as="li" variant="small" className="p-1 font-normal">
+        <NavLink
+          to={"/blog"}
           className={ ({isActive}) => 
             isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold font-PlayFair" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold font-PlayFair"
             
@@ -69,6 +83,7 @@ const NavBar = () => {
           Blog
         </NavLink>
       </Typography>
+      }
       {
         user && <Typography as="li" variant="small" className="p-1 font-normal">
         <NavLink

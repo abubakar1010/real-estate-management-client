@@ -32,13 +32,6 @@ const DisplayCard = ({ element }) => {
             </div>
           </div>
         </div>
-
-        {/* <div className=" flex items-center flex-wrap px-4 pb-6">
-                    <p className=" text-lg font-bold ">Facilities:</p>
-                    {
-                        facilities.map( (element,index) => <p  key={index} className="px-2 border-black">#{element}</p>)
-                    }
-                </div> */}
                 <div className=" flex  items-center pb-4 px-4">
                     <p className=" pr-2 text-[#000000de] font-PlayFair">{facilities[0]}</p>
                     <p className=" border-2 border-[#000000a4] h-[16px]"></p>

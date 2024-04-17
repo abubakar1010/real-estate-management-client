@@ -7,6 +7,7 @@ import Register from "../Pages/Register/Register";
 import PrivateRoute from "../Private/PrivateRoute";
 import PropertyDetails from "../Component/PropertyDetails/PropertyDetails";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
+import Blog from "../Component/Blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,13 @@ const router = createBrowserRouter([
               <PropertyDetails />
             </PrivateRoute>,
             loader: () => fetch('../../public/estate.json')
+        },
+        {
+            path: "/blog",
+            element: <PrivateRoute>
+              <Blog />
+            </PrivateRoute>,
+            loader: () => fetch('../../public/blog.json')
         },
         {
             path: "/update",
