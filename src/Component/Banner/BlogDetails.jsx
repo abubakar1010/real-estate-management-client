@@ -29,7 +29,7 @@ const BlogDetails = () => {
 
           <p className="border-[2px] my-4 w-96 "></p>
 
-          <div className=" flex items-center">
+          <div className=" flex flex-col md:flex-row md:items-center">
             <div className=" flex items-center pr-7 ">
               <p className=" border-r-4 border-[#8f8e8e] pr-7 text-xl font-bold font-PlayFair text-[#3f3c3c]">
                 {author}
@@ -38,13 +38,15 @@ const BlogDetails = () => {
                 {published_date}
               </p>
             </div>
-            <div className=" border-x-4 border-[#8f8e8e] flex items-center gap-3 text-xl text-[#3f3c3c] px-7">
+            <div className=" flex mt-6 items-center md:mt-0">
+            <div className=" md:border-x-4 border-[#8f8e8e] flex items-center gap-3 text-xl text-[#3f3c3c] border-r-4 pr-7 md:px-7">
               <FaEye />
               <p>{view}</p>
             </div>
             <div className=" flex items-center gap-3 text-xl pl-7 text-[#3f3c3c]">
               <FaComment />
               <p>{comment}</p>
+            </div>
             </div>
           </div>
 
@@ -59,7 +61,7 @@ const BlogDetails = () => {
         ))}
       </div>
 
-      <div className=" flex items-center gap-6">
+      <div className=" grid grid-cols-2 xl:flex items-center gap-6">
         <div className=" flex items-center border border-[#3b5999] text-[#3b5999] hover:bg-[#3b5999] hover:text-white text-xl duration-700 hover:duration-700 gap-2 py-2 px-7 rounded-md">
             <GrFacebookOption />
             <p>Share</p>

@@ -13,7 +13,7 @@ const Blog = () => {
                     <h1 className=" font-bold font-PlayFair text-7xl text-white">Our Blogs</h1>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-20 my-16 place-content-center">
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-20 my-16 place-content-center">
                     {
 
                         data.map( element => <DisplayBlog key={element.id} element={element} />)
