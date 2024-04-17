@@ -1,5 +1,7 @@
 import "swiper/css";
 import "swiper/css/pagination";
+import "./Banner.css"
+
 
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
@@ -14,15 +16,17 @@ const Banner = () => {
         autoplay={{
           delay: 6000,
           disableOnInteraction: false,
+          
         }}
         pagination={{
           clickable: true,
         }}
         new
         modules={[Autoplay, Pagination]}
+        className="banner"
       >
-        <SwiperSlide>
-          <div className=" bg-[url('https://i.postimg.cc/NF3pLz19/r-architecture-2g-Dwl-Iim3-Uw-unsplash.jpg')] w-full h-[520px] bg-cover bg-center bg-no-repeat my-8 rounded-xl relative ">
+        <SwiperSlide style={{width: "100%"}}>
+          <div className=" bg-[url('https://i.postimg.cc/NF3pLz19/r-architecture-2g-Dwl-Iim3-Uw-unsplash.jpg')] w-ful h-[520px] bg-cover bg-center bg-no-repeat my-8 rounded-xl relative ">
             <div className="absolute inset-0 grid h-full w-full  items-center bg-[#1d1d1d70] rounded-xl">
               <div className="text-white pl-56">
                 <h1 className=" text-6xl font-extrabold font-PlayFair">Experience</h1>
@@ -40,7 +44,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide style={{width: "100%"}}>
           <div className=" bg-[url('https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65958/-1247076084590263335.jpg')] w-full h-[520px] bg-cover bg-center bg-no-repeat my-8 rounded-xl relative ">
             <div className="absolute inset-0 grid h-full w-full  items-center bg-[#1d1d1d70] rounded-xl">
               <div className="text-white pl-56">
@@ -59,7 +63,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide style={{width: "100%"}}>
           <div className=" bg-[url('https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65966/757402811230810274.jpg')] w-full h-[520px] bg-cover bg-center bg-no-repeat my-8 rounded-xl relative ">
             <div className="absolute inset-0 grid h-full w-full  items-center bg-[#1d1d1d70] rounded-xl">
               <div className="text-white pl-56">

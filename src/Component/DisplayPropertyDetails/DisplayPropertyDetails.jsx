@@ -278,6 +278,7 @@ const DisplayPropertyDetails = ({ element }) => {
                       navigation={true}
                       new
                       modules={[Autoplay, Navigation]}
+                      className="slide"
                     >
                       <SwiperSlide>
                         <div className=" border-2 border-[#00000047] inline-block py-6   px-16 rounded-sm text-center">
@@ -400,7 +401,7 @@ const DisplayPropertyDetails = ({ element }) => {
                 </div>
               </div>
             </div>
-            <div className=" my-12">
+            <div className=" mb-12 mt-48">
               <PropertyMap position={position} location={location} />
             </div>
           </section>
