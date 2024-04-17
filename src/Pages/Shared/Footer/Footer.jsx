@@ -33,13 +33,13 @@ const Footer = () => {
               <Typography
                 variant="small"
                 color="blue-gray"
-                className="mb-4 font-PlayFair font-bold uppercase opacity-50"
+                className="mb-4  font-bold uppercase opacity-50"
               >
                 {title}
               </Typography>
               <ul className="space-y-1">
                 {links.map((link, key) => (
-                  <Typography key={key} as="li" color="blue-gray" className="font-medium font-PlayFair">
+                  <Typography key={key} as="li" color="blue-gray" className="font-medium ">
                     <a
                       href="#"
                       className="inline-block py-1 pr-2 transition-transform hover:scale-105"
@@ -58,7 +58,7 @@ const Footer = () => {
             className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
           >
             Copyright &copy; {currentYear} <Link to="/"
-            className="font-PlayFair cursor-pointer mx-1 font-bold text-lg "
+            className=" cursor-pointer mx-1 font-bold text-lg "
           >
             Traum<span className=" text-[#FF5D64]">Heim </span>
           </Link>  

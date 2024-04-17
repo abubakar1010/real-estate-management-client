@@ -24,14 +24,14 @@ const BlogDetails = () => {
        
       </div>
       <div className=" min-h-[70px] mt-9 mb-4">
-            <h1 className="  text-2xl font-bold font-PlayFair">{heading}</h1>
+            <h1 className="  text-2xl font-bold ">{heading}</h1>
           </div>
 
           <p className="border-[2px] my-4 w-96 "></p>
 
           <div className=" flex flex-col md:flex-row md:items-center">
             <div className=" flex items-center pr-7 ">
-              <p className=" border-r-4 border-[#8f8e8e] pr-7 text-xl font-bold font-PlayFair text-[#3f3c3c]">
+              <p className=" border-r-4 border-[#8f8e8e] pr-7 text-xl font-bold  text-[#3f3c3c]">
                 {author}
               </p>
               <p className="text-xl font-bold font-sans pl-7 text-[#3f3c3c]">
@@ -54,7 +54,7 @@ const BlogDetails = () => {
         {content.map((element) => (
           <>
           <div className=" my-16">
-            <h1 className=" font-medium font-PlayFair text-3xl mb-6">{element.title}</h1>
+            <h1 className=" font-medium  text-3xl mb-6">{element.title}</h1>
             <p>{element.text}</p>
           </div>
           </>

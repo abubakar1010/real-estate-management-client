@@ -39,7 +39,7 @@ const NavBar = () => {
         <NavLink
           to={"/"}
           className={ ({isActive}) => 
-            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold font-PlayFair" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold font-PlayFair"
+            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold"
             
           }
         >
@@ -50,7 +50,7 @@ const NavBar = () => {
         <NavLink
           to={"/service"}
           className={ ({isActive}) => 
-            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold font-PlayFair" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold font-PlayFair"
+            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold"
             
           }
         >
@@ -62,7 +62,7 @@ const NavBar = () => {
         <NavLink
           to={"/contact"}
           className={ ({isActive}) => 
-            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold font-PlayFair" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold font-PlayFair"
+            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold"
             
           }
         >
@@ -75,7 +75,7 @@ const NavBar = () => {
         <NavLink
           to={"/blog"}
           className={ ({isActive}) => 
-            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold font-PlayFair" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold font-PlayFair"
+            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold"
             
           }
         >
@@ -88,7 +88,7 @@ const NavBar = () => {
         <NavLink
           to={"/update"}
           className={ ({isActive}) => 
-            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold font-PlayFair" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold font-PlayFair"
+            isActive? "flex items-center text-lg text-[#FF5D64] border py-1 px-4 border-[#FF5D64] rounded-lg hover:scale-95 hover:duration-300 duration-300 font-bold" : "flex items-center text-lg text-[#222121] hover:text-[#FF5D64] hover:text-xl hover:duration-300 duration-300 font-bold"
             
           }
         >
@@ -117,7 +117,7 @@ const NavBar = () => {
               <Typography
                 as="a"
                 href="#"
-                className="mr-4 font-PlayFair cursor-pointer py-1.5 font-bold text-3xl "
+                className="mr-4 cursor-pointer py-1.5 font-bold text-3xl "
               >
                 Traum<span className=" text-[#ff0000cf]">Heim</span>
               </Typography>
@@ -126,7 +126,7 @@ const NavBar = () => {
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-x-8">
                 {
-                  user && <button onClick={handleLogout} className="hidden xl:inline-block bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
+                  user && <button onClick={handleLogout} className="hidden xl:inline-block bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 text-white font-bold rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
                   <span>Log Out</span>
                 </button>
                 }
@@ -134,7 +134,7 @@ const NavBar = () => {
                   <UserProfile />
                 ) : (
                   <Link to={"/login"}>
-                    <button className="hidden xl:inline-block bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
+                    <button className="hidden xl:inline-block bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 text-white font-bold rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
                       <span>Log In</span>
                     </button>
                   </Link>
@@ -183,11 +183,11 @@ const NavBar = () => {
             {navList}
             <div className="flex items-center gap-x-7">
               
-                  <button onClick={handleLogout} className=" hover:bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 hover:text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500 w-full text-[#2e2d2d] border border-[#FF8938]  ">
+                  <button onClick={handleLogout} className=" hover:bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-5 hover:text-white font-bold rounded-md text-xl hover:scale-105 duration-500 hover:duration-500 w-full text-[#2e2d2d] border border-[#FF8938]  ">
                   <span>Log Out</span>
                 </button>
                 <Link to={"/login"} className=" w-full">
-                    <button className="w-full bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-3 text-white font-bold font-PlayFair rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
+                    <button className="w-full bg-gradient-to-r from-[#ff0000] to-[#FF8938]  py-2 px-3 text-white font-bold rounded-md text-xl hover:scale-105 duration-500 hover:duration-500  ">
                       <span>Log In</span>
                     </button>
                   </Link>

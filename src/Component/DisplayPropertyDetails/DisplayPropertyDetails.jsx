@@ -53,10 +53,10 @@ const DisplayPropertyDetails = ({ element }) => {
           </div>
 
           <div className=" mt-7 border-b border-[#64626265] pb-6">
-            <p className=" text-xl font-bold font-PlayFair bg-gradient-to-r from-[#ff0000] to-[#FF8938] text-white inline-block py-3 px-6  top-6 right-6 rounded-sm mb-2 ">
+            <p className=" text-xl font-bold  bg-gradient-to-r from-[#ff0000] to-[#FF8938] text-white inline-block py-3 px-6  top-6 right-6 rounded-sm mb-2 ">
               For {status}
             </p>
-            <p className=" text-lg font-medium font-PlayFair">
+            <p className=" text-lg font-medium ">
               1461 Obere Zifen, {city}
             </p>
             <div className=" flex item-center gap-1 mt-2">
@@ -71,10 +71,10 @@ const DisplayPropertyDetails = ({ element }) => {
 
           <section className="  mb-16 mt-12">
             <div>
-              <h1 className=" font-PlayFair font-bold text-3xl">
+              <h1 className="  font-bold text-3xl">
                 {estate_title}
               </h1>
-              <p className=" font-PlayFair text-lg mt-4 ">
+              <p className="  text-lg mt-4 ">
                 Welcome to this unparalleled {estate_title} from the Ritz and
                 LakeClub, offering expansive lake views, recently-added
                 resort-style infinity pool and deck, 4-car garage with golf
@@ -102,65 +102,65 @@ const DisplayPropertyDetails = ({ element }) => {
               <div className=" grid place-content-center md:grid-cols-2 xl:flex gap-6 justify-center my-12">
                 <div className=" border px-4 py-8 shadow-sm w-72 inline-block ">
                   <IoHomeOutline className=" text-5xl mb-6" />
-                  <h1 className=" text-xl font-bold font-PlayFair mb-2">
+                  <h1 className=" text-xl font-bold  mb-2">
                     Residential
                   </h1>
-                  <p className=" font-PlayFair text-lg">Property Type</p>
+                  <p className="  text-lg">Property Type</p>
                 </div>
                 <div className=" border px-4 py-8 shadow-sm w-72 inline-block ">
                   <MdOutlinePool className=" text-5xl mb-6" />
-                  <h1 className=" text-xl font-bold font-PlayFair mb-2">
+                  <h1 className=" text-xl font-bold  mb-2">
                     Pool - Private
                   </h1>
-                  <p className=" font-PlayFair text-lg">Amenity</p>
+                  <p className="  text-lg">Amenity</p>
                 </div>
                 <div className=" border px-4 py-8 shadow-sm w-72 inline-block ">
                   <FaPersonRunning className=" text-5xl mb-6" />
-                  <h1 className=" text-xl font-bold font-PlayFair mb-2">
+                  <h1 className=" text-xl font-bold  mb-2">
                     Beach Access
                   </h1>
-                  <p className=" font-PlayFair text-lg">Proximity</p>
+                  <p className="  text-lg">Proximity</p>
                 </div>
                 <div className=" border px-4 py-8 shadow-sm w-72 inline-block ">
                   <FaUmbrellaBeach className=" text-5xl mb-6" />
-                  <h1 className=" text-xl font-bold font-PlayFair mb-2">
+                  <h1 className=" text-xl font-bold  mb-2">
                     Ocean View
                   </h1>
-                  <p className=" font-PlayFair text-lg">View</p>
+                  <p className="  text-lg">View</p>
                 </div>
               </div>
 
-              <h1 className=" text-2xl font-bold font-PlayFair mt-16  mx-16">
+              <h1 className=" text-2xl font-bold  mt-16  mx-16">
                 Property Details:
               </h1>
               <div className=" grid place-content-center grid-cols-2 md:grid-cols-3 xl:flex gap-16 mt-12 mb-16 mx-16 justify-between">
                 <div>
                   <IoBedOutline className=" text-4xl"></IoBedOutline>
-                  <p className=" text-lg uppercase font-medium mt-2 leading-relaxed font-PlayFair">
+                  <p className=" text-lg uppercase font-medium mt-2 leading-relaxed ">
                     {property_details.bedrooms} Beds
                   </p>
                 </div>
                 <div>
                   <TbBath className=" text-4xl"></TbBath>
-                  <p className=" text-lg uppercase font-medium mt-2 leading-relaxed font-PlayFair">
+                  <p className=" text-lg uppercase font-medium mt-2 leading-relaxed ">
                     {property_details.bathrooms} Baths
                   </p>
                 </div>
                 <div>
                   <MdOutlineKitchen className=" text-4xl"></MdOutlineKitchen>
-                  <p className=" text-lg uppercase font-medium mt-2 leading-relaxed font-PlayFair">
+                  <p className=" text-lg uppercase font-medium mt-2 leading-relaxed ">
                     {property_details.kitchen} Kitchen
                   </p>
                 </div>
                 <div>
                   <HiOutlineArrowTopRightOnSquare className=" text-4xl" />
-                  <p className=" text-lg uppercase font-medium mt-2 leading-relaxed font-PlayFair">
+                  <p className=" text-lg uppercase font-medium mt-2 leading-relaxed ">
                     {living_area} Living Area
                   </p>
                 </div>
                 <div>
                   <PiIntersectSquareLight className=" text-4xl" />
-                  <p className=" text-lg uppercase font-medium mt-2 leading-relaxed font-PlayFair">
+                  <p className=" text-lg uppercase font-medium mt-2 leading-relaxed ">
                     {area} Lot
                   </p>
                 </div>
@@ -176,7 +176,7 @@ const DisplayPropertyDetails = ({ element }) => {
                             <div className=" flex gap-2 items-center mb-7 ">
                               <IoMdCheckboxOutline className=" text-xl text-[#FF8938] " />
                               <p
-                                className=" text-lg font-medium font-PlayFair"
+                                className=" text-lg font-medium "
                                 key={index}
                               >
                                 {element}
@@ -189,7 +189,7 @@ const DisplayPropertyDetails = ({ element }) => {
                             <div className=" flex gap-2 items-center mb-7 ">
                               <IoMdCheckboxOutline className=" text-xl text-[#FF8938] " />
                               <p
-                                className=" text-lg font-medium font-PlayFair"
+                                className=" text-lg font-medium "
                                 key={index}
                               >
                                 {element}
@@ -217,10 +217,10 @@ const DisplayPropertyDetails = ({ element }) => {
               />
                       </div>
                       <div>
-                        <p className=" font-bold font-PlayFair text-xl">
+                        <p className=" font-bold  text-xl">
                           {user?.displayName}
                         </p>
-                        <p className=" font-medium text-lg font-PlayFair ">
+                        <p className=" font-medium text-lg  ">
                           {user?.email}
                         </p>
                       </div>
@@ -244,8 +244,8 @@ const DisplayPropertyDetails = ({ element }) => {
                       />
                     </div>
 
-                    <p className=" font-PlayFair font-medium">{`I'm interested in this property and I'd like to know more details.`}</p>
-                    <button className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938] w-full py-3 rounded-lg font-bold text-white font-PlayFair text-xl">
+                    <p className="  font-medium">{`I'm interested in this property and I'd like to know more details.`}</p>
+                    <button className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938] w-full py-3 rounded-lg font-bold text-white  text-xl">
                       Send Message
                     </button>
                   </div>
@@ -258,10 +258,10 @@ const DisplayPropertyDetails = ({ element }) => {
                 </div>
                 <div className=" w-full ">
                   <div>
-                    <h1 className=" text-4xl font-medium font-PlayFair">
+                    <h1 className=" text-4xl font-medium ">
                       Schedule a Showing
                     </h1>
-                    <p className=" text-lg font-PlayFair mt-6">
+                    <p className=" text-lg  mt-6">
                       I would love to show you our beautiful property. Please
                       select your preferred date and time below. I will be in
                       touch shortly to confirm your appointment.
@@ -283,91 +283,91 @@ const DisplayPropertyDetails = ({ element }) => {
                     >
                       <SwiperSlide>
                         <div className=" border-2 border-[#00000047] inline-block py-6   px-16 rounded-sm text-center">
-                          <p className=" font-medium text-lg font-PlayFair ">
+                          <p className=" font-medium text-lg  ">
                             {moment().add(0, "days").format("ddd")}
                           </p>
                           <p className=" font-medium text-4xl mb-2 mt-4 text-[#181818bd]">
                             {moment().add(0, "days").format("D")}
                           </p>
-                          <p className=" font-medium text-xl font-PlayFair text-[#181818bd]">
+                          <p className=" font-medium text-xl  text-[#181818bd]">
                             {moment().format("MMM")}
                           </p>
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
                         <div className=" border-2 border-[#00000047] inline-block py-6   px-16 rounded-sm text-center">
-                          <p className=" font-medium text-lg font-PlayFair ">
+                          <p className=" font-medium text-lg  ">
                             {moment().add(1, "days").format("ddd")}
                           </p>
                           <p className=" font-medium text-4xl mb-2 mt-4 text-[#181818bd]">
                             {moment().add(1, "days").format("D")}
                           </p>
-                          <p className=" font-medium text-xl font-PlayFair text-[#181818bd]">
+                          <p className=" font-medium text-xl  text-[#181818bd]">
                             {moment().format("MMM")}
                           </p>
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
                         <div className=" border-2 border-[#00000047] inline-block py-6   px-16 rounded-sm text-center">
-                          <p className=" font-medium text-lg font-PlayFair ">
+                          <p className=" font-medium text-lg  ">
                             {moment().add(2, "days").format("ddd")}
                           </p>
                           <p className=" font-medium text-4xl mb-2 mt-4 text-[#181818bd]">
                             {moment().add(2, "days").format("D")}
                           </p>
-                          <p className=" font-medium text-xl font-PlayFair text-[#181818bd]">
+                          <p className=" font-medium text-xl  text-[#181818bd]">
                             {moment().format("MMM")}
                           </p>
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
                         <div className=" border-2 border-[#00000047] inline-block py-6   px-16 rounded-sm text-center">
-                          <p className=" font-medium text-lg font-PlayFair ">
+                          <p className=" font-medium text-lg  ">
                             {moment().add(3, "days").format("ddd")}
                           </p>
                           <p className=" font-medium text-4xl mb-2 mt-4 text-[#181818bd]">
                             {moment().add(3, "days").format("D")}
                           </p>
-                          <p className=" font-medium text-xl font-PlayFair text-[#181818bd]">
+                          <p className=" font-medium text-xl  text-[#181818bd]">
                             {moment().format("MMM")}
                           </p>
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
                         <div className=" border-2 border-[#00000047] inline-block py-6   px-16 rounded-sm text-center">
-                          <p className=" font-medium text-lg font-PlayFair ">
+                          <p className=" font-medium text-lg  ">
                             {moment().add(4, "days").format("ddd")}
                           </p>
                           <p className=" font-medium text-4xl mb-2 mt-4 text-[#181818bd]">
                             {moment().add(4, "days").format("D")}
                           </p>
-                          <p className=" font-medium text-xl font-PlayFair text-[#181818bd]">
+                          <p className=" font-medium text-xl  text-[#181818bd]">
                             {moment().format("MMM")}
                           </p>
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
                         <div className=" border-2 border-[#00000047] inline-block py-6   px-16 rounded-sm text-center">
-                          <p className=" font-medium text-lg font-PlayFair ">
+                          <p className=" font-medium text-lg  ">
                             {moment().add(5, "days").format("ddd")}
                           </p>
                           <p className=" font-medium text-4xl mb-2 mt-4 text-[#181818bd]">
                             {moment().add(5, "days").format("D")}
                           </p>
-                          <p className=" font-medium text-xl font-PlayFair text-[#181818bd]">
+                          <p className=" font-medium text-xl  text-[#181818bd]">
                             {moment().format("MMM")}
                           </p>
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
                         <div className=" border-2 border-[#00000047] inline-block py-6   px-16 rounded-sm text-center">
-                          <p className=" font-medium text-lg font-PlayFair ">
+                          <p className=" font-medium text-lg  ">
                             {moment().add(6, "days").format("ddd")}
                           </p>
                           <p className=" font-medium text-4xl mb-2 mt-4 text-[#181818bd]">
                             {moment().add(6, "days").format("D")}
                           </p>
-                          <p className=" font-medium text-xl font-PlayFair text-[#181818bd]">
+                          <p className=" font-medium text-xl  text-[#181818bd]">
                             {moment().format("MMM")}
                           </p>
                         </div>

@@ -188,7 +188,7 @@ const Register = () => {
           }
           containerProps={{ className: "-ml-2.5" }}
         />
-        <button type="submit" className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938]  w-full py-3 rounded-lg font-bold text-white font-PlayFair text-xl" >
+        <button type="submit" className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938]  w-full py-3 rounded-lg font-bold text-white  text-xl" >
           sign up
         </button>
         <Typography color="gray" className="mt-4 text-center font-normal">

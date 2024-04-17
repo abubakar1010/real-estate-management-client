@@ -11,7 +11,7 @@
         "location": "Zurich, Switzerland",
         "city": "Zurich, Zu 56242",
         "position": [3.1607569966484563, 101.67242046567831],
-        "image": "https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65855/1852250456382569896.jpg",
+        "image": "https://i.postimg.cc/dtL1yD5W/1852250456382569896.jpg",
         "facilities": [
             
             "Garden",
@@ -54,7 +54,7 @@
         "location": "Williamstown, Australia",
         "city": "Williamstown, Wi 36240",
         "position": [-37.859445579401935, 144.822554542076],
-        "image": "https://lh3.googleusercontent.com/GBTCHK6eqyqQOcgRsX-PcmZ9OGKYFGdFXKWGA-ZoekJPV86NP7iWbzdS9JjVXVmqelQRt2pj3GQPNJbkcyeyLCc_58U_gp5QAYKm3w=rw-w1440-h843-n-l60",
+        "image": "https://i.postimg.cc/cCJQYZzQ/unnamed.webp",
         "facilities": [
             
             "Balcony",
@@ -98,7 +98,7 @@
         "location": "Melbourne, Australia",
         "city": "Melbourne, Me 26540",
         "position": [-37.81191981309246, 144.95952595421588],
-        "image": "https://cdnparap20.paragonrels.com/ParagonImages/Property/P2/LCBORMLS/65881/2/0/0/f83665effa4fe80eb1130756326c0519/0/98dbd4a4dac3ee545a6661d92ad160a3/65881-a2241a3c-ee8f-4a1f-b2d2-690848359910.JPG",
+        "image": "https://i.postimg.cc/XYnyynyX/65881-a2241a3c-ee8f-4a1f-b2d2-690848359910.jpg",
         "facilities": [
             
             "Backyard",
@@ -141,7 +141,7 @@
         "location": "Tokyo, Japan",
         "city": "Tokyo, To 36248",
         "position": [35.78341832485879, 139.72613290450528],
-        "image": "https://img.jamesedition.com/listing_images/2023/12/07/12/18/57/bb01673e-745d-417d-942c-73d7d855a731/je/1100xxs.jpg",
+        "image": "https://i.postimg.cc/SKCFFbD7/1100xxs.webp",
         "facilities": [
             
             "Swimming Pool",
@@ -184,7 +184,7 @@
         "location": "Basel, Switzerland",
         "city": "Basel, Ba 26640",
         "position": [47.55934179515054, 7.586849963633109],
-        "image": "https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65463/1688783102332492572.jpg",
+        "image": "https://i.postimg.cc/fyTRRRPh/1688783102332492572.jpg",
         "facilities": [
             
             "Furnished Rooms",
@@ -220,7 +220,7 @@
         "location": "Zermatt, Switzerland",
         "city": "Zermatt, Ze 26940",
         "position": [46.011414460964666, 7.65472300249026],
-        "image": "https://dlajgvw9htjpb.cloudfront.net/cms/c60b43e3-96d9-447c-b364-47f8d14f0e76/65855/665063201256581890.jpg",
+        "image": "https://i.postimg.cc/281CcMRT/665063201256581890.jpg",
         "facilities": [
             
             "Restaurant",
@@ -265,7 +265,7 @@
         "location": "Dubai, UAE",
         "city": "Dubai, Du 36340",
         "position": [25.206139506905977, 55.27133301690149],
-        "image": "https://dq1niho2427i9.cloudfront.net/c60b43e3-96d9-447c-b364-47f8d14f0e76/1120980468.jpg",
+        "image": "https://i.postimg.cc/P5n0WRtC/1120980468.jpg",
         "facilities": [
             
             "Private Pool",
@@ -309,7 +309,7 @@
         "location": "Zurich, Switzerland",
         "city": "Zurich, Zu 56242",
         "position": [47.375784749388245, 8.551494834508043],
-        "image": "https://dq1niho2427i9.cloudfront.net/c60b43e3-96d9-447c-b364-47f8d14f0e76/941369693.jpg",
+        "image": "https://i.postimg.cc/mZJrsBSK/941369693.jpg",
         "facilities": [
             
             "Barn",
@@ -354,7 +354,7 @@
         "location": "Paris, France",
         "city": "Paris, Pa 46240",
         "position": [48.854081839156756, 2.3480615187998013],
-        "image": "https://lh3.googleusercontent.com/T6iybCMH60el6TnIHNpOyDqVSbxyaYQCNJd0f9UbxcMcqwCt3VnSya2OjHoFwXwinefRHjEHBg1nlWGhoyCaWJljhc5yPIaWaQ5hGw=rw-w768-h433-n-l60",
+        "image": "https://i.postimg.cc/Bn8kGfM7/unnamed-1.webp",
         "facilities": [
             
             "Exposed Brick Walls",
@@ -386,49 +386,5 @@
             "parking": "Street Parking"
         },
         "rating": 4.7
-    },
-    {
-        "id": "10",
-        "estate_title": "Lakefront Cabin",
-        "segment_name": "Vacation Rental",
-        "description": "A cozy lakefront cabin nestled in the woods, offering stunning views and a peaceful atmosphere. Perfect for a romantic getaway or outdoor adventure.",
-        "price": 72500000,
-        "status": "Rent",
-        "area": "74,000 sq ft",
-        "living_area" : "32,700 sq ft",
-        "location": "Geneva, Switzerland",
-        "city": "Geneva, Ge 76440",
-        "position": [46.20399096844954, 6.141664652272082],
-        "image": "https://dq1niho2427i9.cloudfront.net/c60b43e3-96d9-447c-b364-47f8d14f0e76/-2123150905.jpg",
-        "facilities": [
-            
-            "Lakefront",
-            "Deck",
-            "Fire Pit",
-            "Boat Dock",
-            "Outdoor Dining Area",
-            "Wood-Burning Stove",
-            "Fishing Gear",
-            "Hiking Trails",
-            "Barbecue Grill",
-            "Canoe"
-            ,
-            "Outdoor Shower",
-            "Balcony",
-            "Wet Bar",
-            "Private Elevator",
-            "Dining Area",
-            "Washer",
-            "Luxury Property",
-            "Hot Water"
-        ],
-        "property_details": {
-            "bedrooms": 3,
-            "bathrooms": 2,
-            "kitchen": 1,
-            "parking": "On-site"
-        },
-        "price_per_month": 200,
-        "rating": 4.8
     }
 ]

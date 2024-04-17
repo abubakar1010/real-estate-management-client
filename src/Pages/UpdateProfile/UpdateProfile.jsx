@@ -48,7 +48,7 @@ const UpdateProfile = () => {
               <p>{  user?.email}</p>
             </div>
             <div className=" text-center">
-              <h1 className=" font-bold text-xl font-PlayFair">About Me</h1>
+              <h1 className=" font-bold text-xl">About Me</h1>
               <p className=" text-justify px-12 mt-4">
                 {`A passionate Python Developer with a focus on Machine Learning (ML) and Artificial Intelligence (AI). Equipped with a deep understanding of Python's versatility, I specialize in leveraging ML and AI algorithms to unlock insights, automate processes, and build intelligent systems. From developing predictive models to implementing neural networks, I am passionate about harnessing the power of data to drive innovation and create real-world impact.`}
               </p>
@@ -57,7 +57,7 @@ const UpdateProfile = () => {
         </div>
         <div className="shadow-xl flex justify-center w-full border border-[#29282859] rounded-sm pt-8">
           <form onSubmit={handleUpdate} className="w-full px-8 mb-7 lg:mb-2">
-            <h1 className=" font-bold text-xl mb-6 font-PlayFair">
+            <h1 className=" font-bold text-xl mb-6">
               Update Your Profile:
             </h1>
             <div className="relative z-0 w-full mb-5 group">
@@ -127,10 +127,10 @@ const UpdateProfile = () => {
             </div>
 
             <div className=" ">
-              <button type="submit" className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938] px-12  py-3 rounded-lg font-bold text-white font-PlayFair text-xl ">
+              <button type="submit" className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938] px-12  py-3 rounded-lg font-bold text-white text-xl ">
                 Update
               </button>
-              <button type="reset" className="mt-6 hover:bg-gradient-to-r bg-white from-[#ff0000] to-[#FF8938] px-12 py-3 rounded-lg font-bold hover:text-white font-PlayFair text-xl border border-[#FF8938] ml-7 duration-700 hover:duration-700 hover:delay-300 ">
+              <button type="reset" className="mt-6 hover:bg-gradient-to-r bg-white from-[#ff0000] to-[#FF8938] px-12 py-3 rounded-lg font-bold hover:text-white text-xl border border-[#FF8938] ml-7 duration-700 hover:duration-700 hover:delay-300 ">
                 Reset
               </button>
             </div>

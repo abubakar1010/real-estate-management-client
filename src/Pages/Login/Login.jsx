@@ -96,7 +96,7 @@ const Login = () => {
             isError && <>
 
             <div className=" py-3 rounded-sm border border-[#FF5D64] text-center bg-[#ff5d651d] ">
-              <h1 className=" mb-1 font-PlayFair text-lg font-bold text-[#121212e6]">Wrong credentials</h1>
+              <h1 className=" mb-1 text-lg font-bold text-[#121212e6]">Wrong credentials</h1>
               <p>Invalid username or password</p>
             </div>
             
@@ -143,7 +143,7 @@ const Login = () => {
               </div>
             </div>
             
-            <button type="submit" className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938] w-full py-3 rounded-lg font-bold text-white font-PlayFair text-xl">
+            <button type="submit" className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938] w-full py-3 rounded-lg font-bold text-white text-xl">
               sign In
             </button>
             <Typography color="gray" className="mt-4 text-center font-normal">

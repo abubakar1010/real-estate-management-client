@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import "./font.css";
+
 import { RouterProvider } from "react-router-dom";
 import router from "./Routes/Router";
 import { ThemeProvider } from "@material-tailwind/react";
