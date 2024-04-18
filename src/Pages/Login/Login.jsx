@@ -5,84 +5,82 @@ import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa6";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
+  const { login, googleLogin, githubLogin, setUserData, user } =
+    useContext(AuthContext);
 
-  const {login, googleLogin, githubLogin, setUserData,user} = useContext(AuthContext)
+  const [isError, setIsError] = useState(false);
+  const navigate = useNavigate();
 
-  const [isError, setIsError] = useState(false)
-  const navigate = useNavigate()
+  const [isShowPassword, setIsShowPassword] = useState(false);
 
-  const [isShowPassword, setIsShowPassword] = useState(false)
-
-  const location = useLocation()
+  const location = useLocation();
 
   console.log(location);
 
   const handleShowPassword = () => {
-    setIsShowPassword(!isShowPassword)
-  }
+    setIsShowPassword(!isShowPassword);
+  };
 
   const handleLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
-    e.preventDefault()
-    const email = e.target.email.value
-    const password = e.target.password.value
+    login(email, password)
+      .then(() => {
+        toast.success("Congratulations! You've successfully Logged In.");
+        setUserData(user);
 
-    login(email,password)
-    .then( () => {
-
-      toast.success("Congratulations! You've successfully Logged In.")
-      setUserData(user)
-      
-      setTimeout(() => {
-        navigate(location?.state? location.state : "/")
-      }, 3000);
-
-    })
-    .catch( () => {
-      toast.error("Oops! Login failed.Wrong email and password. Please check your information and try again.")
-      setIsError(true)
-      
-    })
-  }
+        setTimeout(() => {
+          navigate(location?.state ? location.state : "/");
+        }, 3000);
+      })
+      .catch(() => {
+        toast.error(
+          "Oops! Login failed.Wrong email and password. Please check your information and try again."
+        );
+        setIsError(true);
+      });
+  };
 
   const handleGoogleLogin = () => {
-
     googleLogin()
-    .then(() => {
-      setTimeout(() => {
-        navigate(location?.state? location.state : "/")
-      }, 3000);
-      toast.success("Congratulations! You've successfully Logged In.")
-    })
-    .catch( () => {
-
-      toast.error("Oops! Login failed.Wrong email and password. Please check your information and try again.")
-      
-
-    })
-  }
+      .then(() => {
+        setTimeout(() => {
+          navigate(location?.state ? location.state : "/");
+        }, 3000);
+        toast.success("Congratulations! You've successfully Logged In.");
+      })
+      .catch(() => {
+        toast.error(
+          "Oops! Login failed.Wrong email and password. Please check your information and try again."
+        );
+      });
+  };
   const handleGithubLogin = () => {
-
     githubLogin()
-    .then(() => {
-      toast.success("Congratulations! You've successfully Logged In.")
-      setTimeout(() => {
-        navigate(location?.state? location.state : "/")
-      }, 1200);
-    })
-    .catch( () => {
-  
-      toast.error("Oops! Login failed.Wrong email and password. Please check your information and try again.")
-      
-
-    })
-  }
+      .then(() => {
+        toast.success("Congratulations! You've successfully Logged In.");
+        setTimeout(() => {
+          navigate(location?.state ? location.state : "/");
+        }, 1200);
+      })
+      .catch(() => {
+        toast.error(
+          "Oops! Login failed.Wrong email and password. Please check your information and try again."
+        );
+      });
+  };
 
   // console.log(isError);
   return (
     <>
+      <Helmet>
+        <title>Login | TraumHeim </title>
+      </Helmet>
       <div className=" flex justify-center items-center my-16">
         <Card color="transparent" shadow={false}>
           <Typography variant="h4" color="blue-gray">
@@ -92,17 +90,20 @@ const Login = () => {
             Nice to meet you! Enter your details to Login.
           </Typography>
 
-          {
-            isError && <>
-
-            <div className=" py-3 rounded-sm border border-[#FF5D64] text-center bg-[#ff5d651d] ">
-              <h1 className=" mb-1 text-lg font-bold text-[#121212e6]">Wrong credentials</h1>
-              <p>Invalid username or password</p>
-            </div>
-            
+          {isError && (
+            <>
+              <div className=" py-3 rounded-sm border border-[#FF5D64] text-center bg-[#ff5d651d] ">
+                <h1 className=" mb-1 text-lg font-bold text-[#121212e6]">
+                  Wrong credentials
+                </h1>
+                <p>Invalid username or password</p>
+              </div>
             </>
-          }
-          <form onSubmit={handleLogin} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+          )}
+          <form
+            onSubmit={handleLogin}
+            className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
+          >
             <div className="mb-1 flex flex-col gap-6">
               <Typography variant="h6" color="blue-gray" className="-mb-3">
                 Your Email
@@ -119,31 +120,37 @@ const Login = () => {
                 }}
               />
               <div className=" relative">
-              <Typography variant="h6" color="blue-gray" className="mb-3">
-                Password
-              </Typography>
-              <Input
-                type={isShowPassword? "text" : "password"} 
-                name="password"
-                required
-                size="lg"
-                placeholder="********"
-                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-                labelProps={{
-                  className: "before:content-none after:content-none",
-                }}
-              />
-              <div onClick={handleShowPassword} className="absolute top-[50px] right-6">
-            {
-
-              isShowPassword? <FaEyeSlash className=" text-xl" /> : <FaEye className=" text-xl" />
-
-            }
-          </div>
+                <Typography variant="h6" color="blue-gray" className="mb-3">
+                  Password
+                </Typography>
+                <Input
+                  type={isShowPassword ? "text" : "password"}
+                  name="password"
+                  required
+                  size="lg"
+                  placeholder="********"
+                  className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                  labelProps={{
+                    className: "before:content-none after:content-none",
+                  }}
+                />
+                <div
+                  onClick={handleShowPassword}
+                  className="absolute top-[50px] right-6"
+                >
+                  {isShowPassword ? (
+                    <FaEyeSlash className=" text-xl" />
+                  ) : (
+                    <FaEye className=" text-xl" />
+                  )}
+                </div>
               </div>
             </div>
-            
-            <button type="submit" className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938] w-full py-3 rounded-lg font-bold text-white text-xl">
+
+            <button
+              type="submit"
+              className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938] w-full py-3 rounded-lg font-bold text-white text-xl"
+            >
               sign In
             </button>
             <Typography color="gray" className="mt-4 text-center font-normal">
@@ -162,14 +169,23 @@ const Login = () => {
               </span>
             </div>
 
-            <div onClick={handleGoogleLogin} className=" flex gap-4 border-2 border-[#4c4a4aae] items-center py-3 rounded-full justify-center cursor-pointer">
-                <FcGoogle className=" text-3xl" />
-                <p className=" text-lg font-medium text-[#151515ca]">Continue with Google</p>
+            <div
+              onClick={handleGoogleLogin}
+              className=" flex gap-4 border-2 border-[#4c4a4aae] items-center py-3 rounded-full justify-center cursor-pointer"
+            >
+              <FcGoogle className=" text-3xl" />
+              <p className=" text-lg font-medium text-[#151515ca]">
+                Continue with Google
+              </p>
             </div>
-            <div onClick={handleGithubLogin} className=" cursor-pointer flex gap-4 border-2 border-[#4c4a4aae] items-center py-3 rounded-full justify-center mt-6">
-                <FaGithub className=" text-3xl" />
-                <p className=" text-lg font-medium text-[#151515ca]">Continue with 
-                GitHub</p>
+            <div
+              onClick={handleGithubLogin}
+              className=" cursor-pointer flex gap-4 border-2 border-[#4c4a4aae] items-center py-3 rounded-full justify-center mt-6"
+            >
+              <FaGithub className=" text-3xl" />
+              <p className=" text-lg font-medium text-[#151515ca]">
+                Continue with GitHub
+              </p>
             </div>
           </form>
         </Card>

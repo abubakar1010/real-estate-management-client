@@ -13,6 +13,7 @@ import { updateProfile } from "firebase/auth";
 import auth from "../../firebase/firebase.init";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
@@ -92,6 +93,9 @@ const Register = () => {
 
     return (
         <>
+        <Helmet>
+            <title>Register | TraumHeim </title>
+        </Helmet>
             <div className="flex justify-center items-center my-16">
             <Card color="transparent" shadow={false}>
       <Typography variant="h4" color="blue-gray">

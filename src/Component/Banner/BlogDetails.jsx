@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet-async";
 import { FaComment, FaEye, FaGooglePlusG, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { GrFacebookOption } from "react-icons/gr";
@@ -16,6 +17,9 @@ const BlogDetails = () => {
   console.log(filteredData);
   return (
     <>
+    <Helmet>
+        <title>Blog Details | TraumHeim</title>
+      </Helmet>
       <div
         className="relative mt-16 mb-9 h-[620px] w-full bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center object-cover"
         style={{ backgroundImage: `url(${image})` }}

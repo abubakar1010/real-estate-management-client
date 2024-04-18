@@ -20,6 +20,7 @@ import moment from "moment";
 import { Option, Select } from "@material-tailwind/react";
 import { BsFillCameraVideoFill } from "react-icons/bs";
 import { BiDollar } from "react-icons/bi";
+import { Helmet } from "react-helmet-async";
 
 const DisplayPropertyDetails = ({ element }) => {
   const {
@@ -46,6 +47,9 @@ const DisplayPropertyDetails = ({ element }) => {
   console.log(element);
   return (
     <>
+    <Helmet>
+        <title>Property Details | TraumHeim</title>
+      </Helmet>
       <div className=" my-12">
         <div>
           <div className={`w-full h-[470px] `}>

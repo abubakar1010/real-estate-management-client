@@ -5,47 +5,55 @@ import { updateProfile } from "firebase/auth";
 
 import { ToastContainer, toast } from "react-toastify";
 import auth from "../../firebase/firebase.init";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
-    
   const { user } = useContext(AuthContext);
   console.log(user);
 
-  const [updatedProfile, setUpdatedProfile] = useState(null)
+  const [updatedProfile, setUpdatedProfile] = useState(null);
 
   const handleUpdate = (e) => {
+    e.preventDefault();
 
-    e.preventDefault()
-
-    const name = e.target.name.value
-    const photo = e.target.photo.value
+    const name = e.target.name.value;
+    const photo = e.target.photo.value;
     // console.log(name, email, photo, password, conform);
     updateProfile(auth.currentUser, {
-        displayName: name, 
-        photoURL: photo
-      }).then(() => {
+      displayName: name,
+      photoURL: photo,
+    })
+      .then(() => {
         toast("Congratulations! Your Profile Updated successfully.");
-        setUpdatedProfile(user)
-      }).catch((error) => {
-        toast("Oops! Profile Update failed. Please check your information and try again.");
+        setUpdatedProfile(user);
+      })
+      .catch((error) => {
+        toast(
+          "Oops! Profile Update failed. Please check your information and try again."
+        );
         console.error("Error updating profile:", error);
       });
-  }
+  };
   return (
     <>
+      <Helmet>
+        <title>Update Profile | TraumHeim</title>
+      </Helmet>
       <div className=" my-28 lg:flex gap-16 ">
         <div className=" shadow-xl lg:flex justify-center lg:w-[720px] border border-[#29282859] rounded-sm py-8 mb-28 lg:mb-auto">
           <div>
             <div className=" text-center mb-7">
               <Avatar
                 size="xl"
-                src={ updatedProfile?.photoURL || user?.photoURL}
+                src={updatedProfile?.photoURL || user?.photoURL}
                 alt="avatar"
                 withBorder={true}
                 className="p-0.5"
               />
-              <p className=" mt-4 mb-1">{ updateProfile?.displayName || user?.displayName}</p>
-              <p>{  user?.email}</p>
+              <p className=" mt-4 mb-1">
+                {updateProfile?.displayName || user?.displayName}
+              </p>
+              <p>{user?.email}</p>
             </div>
             <div className=" text-center">
               <h1 className=" font-bold text-xl">About Me</h1>
@@ -57,14 +65,11 @@ const UpdateProfile = () => {
         </div>
         <div className="shadow-xl flex justify-center w-full border border-[#29282859] rounded-sm pt-8">
           <form onSubmit={handleUpdate} className="w-full px-8 mb-7 lg:mb-2">
-            <h1 className=" font-bold text-xl mb-6">
-              Update Your Profile:
-            </h1>
+            <h1 className=" font-bold text-xl mb-6">Update Your Profile:</h1>
             <div className="relative z-0 w-full mb-5 group">
               <input
                 type="text"
                 name="name"
-                
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 required
@@ -77,7 +82,6 @@ const UpdateProfile = () => {
               <input
                 type="email"
                 name="email"
-                
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 required
@@ -90,7 +94,6 @@ const UpdateProfile = () => {
               <input
                 type="text"
                 name="photo"
-                
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 required
@@ -116,7 +119,6 @@ const UpdateProfile = () => {
               <input
                 type="password"
                 name="update"
-                
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 required
@@ -127,10 +129,16 @@ const UpdateProfile = () => {
             </div>
 
             <div className=" ">
-              <button type="submit" className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938] px-12  py-3 rounded-lg font-bold text-white text-xl ">
+              <button
+                type="submit"
+                className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938] px-12  py-3 rounded-lg font-bold text-white text-xl "
+              >
                 Update
               </button>
-              <button type="reset" className="mt-6 hover:bg-gradient-to-r bg-white from-[#ff0000] to-[#FF8938] px-12 py-3 rounded-lg font-bold hover:text-white text-xl border border-[#FF8938] ml-7 duration-700 hover:duration-700 hover:delay-300 ">
+              <button
+                type="reset"
+                className="mt-6 hover:bg-gradient-to-r bg-white from-[#ff0000] to-[#FF8938] px-12 py-3 rounded-lg font-bold hover:text-white text-xl border border-[#FF8938] ml-7 duration-700 hover:duration-700 hover:delay-300 "
+              >
                 Reset
               </button>
             </div>

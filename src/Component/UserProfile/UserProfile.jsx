@@ -11,6 +11,7 @@ import { IoPower } from "react-icons/io5";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
 import { Tooltip } from "@material-tailwind/react";
+import { Helmet } from "react-helmet-async";
 
 const UserProfile = () => {
   const { logout, user, userData, setUserData } = useContext(AuthContext);
@@ -40,6 +41,9 @@ const UserProfile = () => {
 
   return (
     <>
+    <Helmet>
+        <title>Profile | TraumHeim</title>
+      </Helmet>
       <div>
         <Menu>
         <Tooltip
