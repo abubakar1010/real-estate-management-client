@@ -28,11 +28,12 @@ const DisplayCard = ({ element }) => {
     property_details,
   } = element;
   return (
-    <div data-aos="fade-up" data-aos-duration="1000" className=" flex justify-center items-center h-[510px] ">
-      <div
-        
-        className=" shadow-xl border-2 border-[#0003] h-full rounded-xl"
-      >
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      className=" flex justify-center items-center h-[510px] "
+    >
+      <div className=" shadow-xl border-2 border-[#0003] h-full rounded-xl">
         <div className=" ">
           <img
             src={image}

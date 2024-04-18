@@ -34,21 +34,21 @@ const router = createBrowserRouter([
             element: <PrivateRoute>
               <PropertyDetails />
             </PrivateRoute>,
-            loader: () => fetch('../../public/estate.json')
+            loader: () => fetch('/estate.json')
         },
         {
             path: "/blog",
             element: <PrivateRoute>
               <Blog />
             </PrivateRoute>,
-            loader: () => fetch('../../public/blog.json')
+            loader: () => fetch('/blog.json')
         },
         {
           path: "/blogDetails/:id",
           element: <PrivateRoute>
             <BlogDetails />
           </PrivateRoute>,
-          loader: () => fetch('../../public/blog.json')
+          loader: () => fetch('/blog.json')
       },
         {
             path: "/update",
