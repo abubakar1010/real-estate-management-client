@@ -44,6 +44,7 @@ Website Link: <a href="https://ph-assignment-09-7744b.web.app" target="_blank">T
 <ol>
   <li>Swiper slider</li>
   <li>React-leaflet</li>
+  <li>AOS package </li>
   <li>moment js</li>
 </ol>
 

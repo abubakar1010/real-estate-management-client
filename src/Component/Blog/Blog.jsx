@@ -1,8 +1,15 @@
 import { useLoaderData } from "react-router-dom";
 import DisplayBlog from "../DisplayBlog/DisplayBlog";
 import { Helmet } from "react-helmet-async";
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Blog = () => {
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   const data = useLoaderData();
   console.log(data);
   return (
@@ -13,7 +20,7 @@ const Blog = () => {
       <div>
         <div className=" relative mt-16 mb-9 h-[620px] w-full bg-[url(https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/imaalnjnizzd4lsxchjf/blog)] bg-cover bg-center bg-no-repeat flex justify-center items-center">
           <div className="  inset-0 bg-gradient-to-tr from-[#00000083] via-[#302f2f2b] to-[#2323233b] absolute"></div>
-          <h1 className=" font-bold  text-7xl text-white">Our Blogs</h1>
+          <h1 data-aos="fade-left" className=" font-bold  text-7xl text-white">Our Blogs</h1>
         </div>
 
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-20 my-16 place-content-center">

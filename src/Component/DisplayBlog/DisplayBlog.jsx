@@ -1,13 +1,22 @@
 import PropTypes from "prop-types"
 import { FaEye } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const DisplayBlog = ({element}) => {
+
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
     const {id, image, heading, author, published_date, view, content} = element
 
     return (
         <>
-            <div className="  w-full ">
+            <div data-aos="zoom-in-up" data-aos-duration="1000" className="  w-full ">
       <div className=" w-full">
         <div className=" w-full ">
           <img

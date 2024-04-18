@@ -7,6 +7,7 @@ import Footer from "../Pages/Shared/Footer/Footer";
 
 
 const RootLayout = () => {
+
     return (
         <div className="container mx-auto">
             <NavBar />
