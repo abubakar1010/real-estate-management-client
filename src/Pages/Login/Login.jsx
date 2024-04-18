@@ -8,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
 
 const Login = () => {
-  const { login, googleLogin, githubLogin, setUserData, user } =
+  const { login, googleLogin, githubLogin, setUserData, user, setLoading } =
     useContext(AuthContext);
 
   const [isError, setIsError] = useState(false);
@@ -39,6 +39,7 @@ const Login = () => {
         }, 1200);
       })
       .catch(() => {
+        setLoading(false)
         toast.error(
           "Oops! Login failed.Wrong email and password. Please check your information and try again."
         );
