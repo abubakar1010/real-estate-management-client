@@ -9,11 +9,13 @@ import PropertyDetails from "../Component/PropertyDetails/PropertyDetails";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import Blog from "../Component/Blog/Blog";
 import BlogDetails from "../Component/Banner/BlogDetails";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
         {
             path: "/",

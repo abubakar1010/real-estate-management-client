@@ -36,7 +36,7 @@ const Login = () => {
 
         setTimeout(() => {
           navigate(location?.state ? location.state : "/");
-        }, 3000);
+        }, 1200);
       })
       .catch(() => {
         toast.error(
@@ -190,7 +190,7 @@ const Login = () => {
           </form>
         </Card>
       </div>
-      <ToastContainer autoClose={800} />
+      <ToastContainer autoClose={1000} />
     </>
   );
 };
